@@ -1,0 +1,175 @@
+<!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- title and metas -->
+		<title>Climate Change Challenge - Schools</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Alessandro Flora">
+		<meta name="description" content="Erasmus+ Climate Change Challenge">
+		<meta name="keywords" content="erasmus,project,einstein,liceo,high,school,climate,change,challenge">
+		<meta name="theme-color" content="#035ba5">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- stylesheet and favicon implementation -->
+		<link rel="stylesheet" href="/sources/style/style.css" type="text/css">
+		<link rel="stylesheet" href="/sources/style/mobile.css" type="text/css"> <!-- FOR MOBILE DEVICES COMPATIBILITY -->
+		<link rel="shotcut icon" href="/sources/images/favicon.ico" type="image/x-icon">
+		
+		<!-- GOOGLE FONTS implementation: used fonts are Pacifico and Open Sans -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+		
+		<!-- OPENDYSLEXIC implementation: used for increase dyslexic people possibility to access to the website -->
+		<link rel="stylesheet" href="/sources/fonts/opendyslexic.css" type="text/css"/>
+		
+	</head>
+	
+	
+	<!-- MAIN SCRIPT -->
+	<script type="text/javascript" src="/sources/script/main.js"></script>
+	
+	<!-- BROWSER DETECTION SCRIPT -->
+	<script type="text/javascript" src="/sources/script/browser.js"></script>
+	
+	<!-- SWEET ALERT 2 IMPLEMENTATION SCRIPT - all credits to https://sweetalert2.github.io/ -->
+	<script type="text/javascript" src="/sources/script/swal2.js"></script>
+	
+	<body>
+	
+		<!-- page HEADER: containing the co-founded by Erasmus+ logo and the Climate Change Challenge logo, does not variate for each page -->
+		<header>
+			<a href="/"><img id="logo" src="/sources/images/logo.jpg" type="image/jpg" alt="Climate Change Challenge" title="Climate Change Challenge"/></a>
+			<a href="https://erasmus-plus.ec.europa.eu/it" target="_blank">
+				<img id="cofounder" src="/sources/images/cofounder.jpg" type="image/jpg" alt="Co-founded by the Erasmus+ Programme of the European Union" title="Co-founded by the Erasmus+ Programme of the European Union"/>
+			</a>
+			<center>
+				<div id="codes">
+					<p>2022, 24<sup>th</sup> October - 29<sup>th</sup> October</p>
+					<label>Project no. 2021-1-FI01-KA220-SCH-000031639</label>
+				</div>
+			</center>
+		</header>
+		
+		<div class="divider"></div> <!-- not supposed to contain anything -->
+		
+		
+		<!-- NAV and 2nd divider are supposed to be hidden until the menu button is pressed -->
+		
+		<div id="hiddenMenu">
+			<nav>
+				<ul>
+					<li><a href="/" title="Go to the homepage">Homepage</a></li>
+					<li><a href="/sources/pages/schools.html" title="Go to the index of schools">Schools</a></li>
+					<li><a href="/sources/pages/info.html" title="Go to the information page">Info</a></li>
+				</ul>
+			</nav>
+		
+			<div class="divider"></div> <!-- not supposed to contain anything -->
+		</div>
+		
+		<!-- MENU: opens the navigation bar -->
+		
+		<div class="menuContainer" onclick="menuToggleAnimation(this)" title="Open the navigation menu"> 
+  			<div class="bar1"></div>
+  			<div class="bar2"></div>
+  			<div class="bar3"></div>
+		</div>
+		
+		<!-- ACCESSIBILITY BUTTON: changes the font to OpenDyslexic in order to increase readability -->
+		
+		<div id="accessibility" onclick="changeFont()" title="Change the font to OpenDyslexic">
+			<img src="/sources/images/fontToggle.png" type="image/png" alt="Aa"/>
+		</div>
+		
+		<!-- TRANSLATE BUTTON: translates the page with Google Translate -->
+		
+		<div id="translate" onclick="changeLanguage()" title="Translate to your language">
+			<img src="/sources/images/translateToggle.png" type="image/png"/>
+		</div>
+		
+		<!-- COOKIES BANNER: supposed to be hidden by main.js body onload event (if the closeCookies cookie is set to yes) -->
+		
+		<div id="cookies">
+			<h6>Cookies Policy</h6>
+			<p>The website <a href="/">climatecc.eu</a> uses necessary cookies for its operations. You cannot disable them but you can read more about the
+			use we make about them on <a href="/sources/pages/cookies.html">this page</a>.</br>By closing this message or continue surfing the website you
+			are asserting you are aware of the cookies policy and you accept it in every part.</p></br>
+			<input type="button" class="closeButton" value="Close" onclick="closeCookies()" title="By closing this message or continue surfing the website you
+			are asserting you are aware of the cookies policy and you accept it in every part."/>
+		</div>
+		
+		<!-- page content: variate for each page -->
+		<section>
+			<article>
+				<h3 id="title">Index of the schools joined the project</h3>
+				<p id="text">
+					<ul>
+						<li><img src="/sources/images/flags/tr.png" type="image/png" alt="Turkey" /><a href="/sources/pages/schools/tr.html" title="Gazi Anadolu Lisesi">Gazi Anadolu Lisesi</a></li>
+						<li><img src="/sources/images/flags/es.png" type="image/png" alt="Spain" /><a href="/sources/pages/schools/es.html" title="Institut Europa">Institut Europa</a></li>
+						<li><img src="/sources/images/flags/pt.png" type="image/png" alt="Portugal" /><a href="/sources/pages/schools/pt.html" title="Escola Profissional Almirante Reis">Escola Profissional Almirante Reis</a></li>
+						<li><img src="/sources/images/flags/it.png" type="image/png" alt="Italy" /><a href="/sources/pages/schools/it.html" title="Liceo A. Einstein Torino">Liceo A. Einstein Torino</a></li>
+						<li><img src="/sources/images/flags/fi.png" type="image/png" alt="Finland" /><a href="/sources/pages/schools/fi.html" title="Lieksan lukio">Lieksan lukio, Lieksan Yläkoulu</a></li>
+						<li><img src="/sources/images/flags/pl.png" type="image/png" alt="Poland" /><a href="/sources/pages/schools/pl.html" title="Zespol Szkol Centrum Edukacji im. Ignacego Lukasiewicza">Zespol Szkol Centrum Edukacji im. Ignacego Lukasiewicza</a></li>
+					</ul>
+				</p>
+				</br></br>
+			</article>			
+		</section>
+		
+			
+		<!-- EDIT FOR EACH PAGE NECESSITY -->
+		<style type="text/css">
+			section {
+				width: 85%;
+				margin: 2.5% 5% 5% 5%;
+				text-align: left;
+			}
+			
+			article img {
+				margin-right: 10px;
+			}
+			
+			ul {
+				color: var(--mainColor);
+			}
+			
+			li {
+				line-height: 125%;
+				margin-top: 20px;
+			}
+
+			li > img {
+				height: 15px;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			var path = "/sources/pages/schools.html";
+		</script>
+		
+		<footer> <!-- not supposed to change for each page -->
+			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
+			<div class="summary">
+				<h3>Climate Change Challenge</h3>
+				<center><table>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/facebookIcon.ico" type="image/x-icon" alt="Facebook" /></td>
+						<td>&ensp;</td>
+						<td><a href="https://www.facebook.com/profile.php?id=100092389128336" target="_blank">Follow the project on Facebook</a></td>
+					</tr>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/mail.png" type="image/png" alt="Mail" /></td>
+						<td>&ensp;</td>
+						<td><a href="mailto:info@climatecc.eu">Email us at info@climatecc.eu</a></td>
+					</tr>
+				</table></center>
+			</div>
+			<hr>
+			<p><a href="https://liceoeinsteintorino.it" target="_blank">&copy; 2023&emsp;-&emsp;Alessandro Flora @ Liceo Einstein Torino</a></p>
+			<label>Last edited on:&emsp;2023, 21<sup>st</sup> May</label>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- CLIMATECC.EU SITEMAP - last edited on 31st may 2023 by Alessandro Flora - info at info@climatecc.eu -->
+
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- MAIN AND STATIC PAGES -->
+  
+  <!-- HOMEPAGE -->
+  <url>
+    <loc>https://www.climatecc.eu/</loc>
+    <lastmod>2023/05/31</lastmod>
+	<changefreq>monthly</changefreq>
+	<priority>1.0</priority>
+  </url>
+  
+  <!-- SCHOOLS PAGE -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/schools.html</loc>
+    <lastmod>2023/05/21</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.8</priority>
+  </url>
+  
+  <!-- INFO PAGE -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/info.html</loc>
+    <lastmod>2023/05/11</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.0</priority>
+  </url>
+  
+  <!-- COOKIES PAGE -->
+  <!--<url>
+    <loc>https://www.climatecc.eu/sources/pages/cookies.html</loc>
+    <lastmod>2023/05/11</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.0</priority>
+  </url>-->
+  
+  
+  
+  
+  
+  <!-- COUNTRY PAGES -->
+  
+  <!-- TURKEY -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/schools/tr.html</loc>
+    <lastmod>2023/05/26</lastmod>
+	<changefreq>monthly</changefreq>
+	<priority>0.5</priority>
+  </url>
+  
+  <!-- SPAIN -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/schools/es.html</loc>
+    <lastmod>2023/05/21</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.5</priority>
+  </url>
+  
+  <!-- PORTUGAL -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/schools/pt.html</loc>
+    <lastmod>2023/05/21</lastmod>
+	<changefreq>monthly</changefreq>
+	<priority>0.5</priority>
+  </url>
+  
+  <!-- ITALY -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/schools/it.html</loc>
+    <lastmod>2023/05/26</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.5</priority>
+  </url>
+  
+  <!-- FINLAND -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/schools/fi.html</loc>
+    <lastmod>2023/05/21</lastmod>
+	<changefreq>monthly</changefreq>
+	<priority>0.5</priority>
+  </url>
+  
+  <!-- POLAND -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/schools/pl.html</loc>
+    <lastmod>2023/05/26</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.5</priority>
+  </url>
+  
+  
+  
+  
+  
+  <!-- MEETING REPORTS AND SCHEDULES -->
+  
+  <!-- HELD -->
+  
+  <!-- TPM SCHEDULE -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/meetings/pt/tpm/schedule.html</loc>
+    <lastmod>2023/05/21</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.2</priority>
+  </url>
+  
+  <!-- TPM REPORT -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/meetings/pt/tpm/report.html</loc>
+    <lastmod>2023/05/19</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.2</priority>
+  </url>
+  
+  <!-- ITALY SCHEDULE -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/meetings/it/schedule.html</loc>
+    <lastmod>2023/05/20</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.2</priority>
+  </url>
+  
+  <!-- ITALY REPORT -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/meetings/it/report.html</loc>
+    <lastmod>2023/05/19</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.2</priority>
+  </url>
+  
+    <!-- SPAIN SCHEDULE -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/meetings/es/report.html</loc>
+    <lastmod>2023/05/20</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.2</priority>
+  </url>
+  
+  <!-- SPAIN PICTURES -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/meetings/es/pictures.html</loc>
+    <lastmod>2023/05/21</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.2</priority>
+  </url>
+  
+  <!-- FINLAND PICTURES -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/meetings/fi/pictures.html</loc>
+    <lastmod>2023/05/21</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.2</priority>
+  </url>
+  
+  <!-- POLAND SCHEDULE -->
+  <url>
+    <loc>https://www.climatecc.eu/sources/pages/meetings/pl/schedule.html</loc>
+    <lastmod>2023/05/21</lastmod>
+	<changefreq>never</changefreq>
+	<priority>0.2</priority>
+  </url>
+  
+</urlset>

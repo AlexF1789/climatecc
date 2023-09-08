@@ -1,0 +1,240 @@
+<!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE 
+IT MEETING SCHEDULE-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- title and metas -->
+		<title>Climate Change Challenge - IT meeting schedule</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Alessandro Flora">
+		<meta name="description" content="Erasmus+ Climate Change Challenge">
+		<meta name="keywords" content="erasmus,project,einstein,liceo,high,school,climate,change,challenge">
+		<meta name="theme-color" content="#035ba5">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- stylesheet and favicon implementation -->
+		<link rel="stylesheet" href="/sources/style/style.css" type="text/css">
+		<link rel="stylesheet" href="/sources/style/mobile.css" type="text/css"> <!-- FOR MOBILE DEVICES COMPATIBILITY -->
+		<link rel="shotcut icon" href="/sources/images/favicon.ico" type="image/x-icon">
+		
+		<!-- GOOGLE FONTS implementation: used fonts are Pacifico and Open Sans -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+		
+		<!-- OPENDYSLEXIC implementation: used for increase dyslexic people possibility to access to the website -->
+		<link rel="stylesheet" href="/sources/fonts/opendyslexic.css" type="text/css"/>
+		
+	</head>
+	
+	
+	<!-- MAIN SCRIPT -->
+	<script type="text/javascript" src="/sources/script/main.js"></script>
+	
+	<!-- BROWSER DETECTION SCRIPT -->
+	<script type="text/javascript" src="/sources/script/browser.js"></script>
+	
+	<!-- SWEET ALERT 2 IMPLEMENTATION SCRIPT - all credits to https://sweetalert2.github.io/ -->
+	<script type="text/javascript" src="/sources/script/swal2.js"></script>
+	
+	<!-- MAILER EXIT CODE -->
+	<script type="text/javascript" src="/sources/script/mail.js"></script>
+	
+	<body>
+	
+		<!-- page HEADER: containing the co-founded by Erasmus+ logo and the Climate Change Challenge logo, does not variate for each page -->
+		<header>
+			<a href="/"><img id="logo" src="/sources/images/logo.jpg" type="image/jpg" alt="Climate Change Challenge" title="Climate Change Challenge"/></a>
+			<a href="https://erasmus-plus.ec.europa.eu/it" target="_blank">
+				<img id="cofounder" src="/sources/images/cofounder.jpg" type="image/jpg" alt="Co-founded by the Erasmus+ Programme of the European Union" title="Co-founded by the Erasmus+ Programme of the European Union"/>
+			</a>
+			<center>
+				<div id="codes">
+					<p>2022, 24<sup>th</sup> October - 29<sup>th</sup> October</p>
+					<label>Project no. 2021-1-FI01-KA220-SCH-000031639</label>
+				</div>
+			</center>
+		</header>
+		
+		<div class="divider"></div> <!-- not supposed to contain anything -->
+		
+		
+		<!-- NAV and 2nd divider are supposed to be hidden until the menu button is pressed -->
+		
+		<div id="hiddenMenu">
+			<nav>
+				<ul>
+					<li><a href="/" title="Go to the homepage">Homepage</a></li>
+					<li><a href="/sources/pages/schools.html" title="Go to the index of schools">Schools</a></li>
+					<li><a href="/sources/pages/info.html" title="Go to the information page">Info</a></li>
+				</ul>
+			</nav>
+		
+			<div class="divider"></div> <!-- not supposed to contain anything -->
+		</div>
+		
+		<!-- MENU: opens the navigation bar -->
+		
+		<div class="menuContainer" onclick="menuToggleAnimation(this)" title="Open the navigation menu"> 
+  			<div class="bar1"></div>
+  			<div class="bar2"></div>
+  			<div class="bar3"></div>
+		</div>
+		
+		<!-- ACCESSIBILITY BUTTON: changes the font to OpenDyslexic in order to increase readability -->
+		
+		<div id="accessibility" onclick="changeFont()" title="Change the font to OpenDyslexic">
+			<img src="/sources/images/fontToggle.png" type="image/png" alt="Aa"/>
+		</div>
+		
+		<!-- TRANSLATE BUTTON: translates the page with Google Translate -->
+		
+		<div id="translate" onclick="changeLanguage()" title="Translate to your language">
+			<img src="/sources/images/translateToggle.png" type="image/png"/>
+		</div>
+		
+		<!-- COOKIES BANNER: supposed to be hidden by main.js body onload event (if the closeCookies cookie is set to yes) -->
+		
+		<div id="cookies">
+			<h6>Cookies Policy</h6>
+			<p>The website <a href="/">climatecc.eu</a> uses necessary cookies for its operations. You cannot disable them but you can read more about the
+			use we make about them on <a href="/sources/pages/cookies.html">this page</a>.</br>By closing this message or continue surfing the website you
+			are asserting you are aware of the cookies policy and you accept it in every part.</p></br>
+			<input type="button" class="closeButton" value="Close" onclick="closeCookies()" title="By closing this message or continue surfing the website you
+			are asserting you are aware of the cookies policy and you accept it in every part."/>
+		</div>
+		
+		<!-- page content: variate for each page -->
+		<section>
+			<article>
+				<h3 id="title">Italy: Turin meeting schedule</h3>
+				<a href="https://liceoeinsteintorino.it" target="_blank" class="schoolLogoCondensed">
+					<img class="schoolLogo" src="/sources/images/schoolLogos/it.png" type="image/png" alt="Liceo Einstein Torino: Italy" title="Liceo Einstein Torino: Italy" /></br>
+					<img style="height: 20px;" src="/sources/images/flags/it.png" type="image/png" alt="Italy">
+					<label title="Click to go to the school website">Liceo "A. Einstein" Torino</label>
+				</a>
+				<div style="width: 100%; overflow-x: auto">
+					<table class="plan">
+					
+						<tr>
+							<th>2022, October Sunday 23<sup>rd</sup></th>
+							<th>2022, October Monday 24<sup>th</sup></th>
+							<th>2022, October Tuesday 25<sup>th</sup></th>
+							<th>2022, October Wednesday 26<sup>th</sup></th>
+							<th>2022, October Thursday 27<sup>th</sup></th>
+							<th>2022, October Friday 28<sup>th</sup></th>
+							<th>2022, October Saturday 29<sup>th</sup></th>
+						</tr>
+						
+						<tr>
+							<td rowspan="2">Delegations arrival</td>
+							<td><b>08.00</b></br>Welcome to school</br></br><b>09.15</b></br>Conference <i>Fridays 4 Future</i>.</br>Introdution meeting with F4F representatives followed by workshops with international groups</br></br><b>10.00 - 12.00</b></br>Lunch break</td>
+							<td><b>08.00</b></br>Meeting at school</br></br><b>09.00 - 11.00</b></br><a href="https://www.polito.it/index.php?lang=en">Politecnico di Torino</a> Seminar held by professor Marco Sangermano “Plastics from oil to bio-based resources”</br></br>Workshop students will be divided in groups</br></br>Lunch break</td>
+							<td><b>07.00</b></br>Meeting at school</br></br><b>09.00 - 11.00</b></br>Students will be splitted into two groups:</br>First group: Workshop with professional architects, project focused on office furniture</br><a href="https://www.izmade.com/en/courses/">https://www.izmade.com/en/courses/</a></br></br>Second group: Workshop at Cecchi Point focused on plastics recycling</br><a href="https://www.cecchipoint.it/2020/10/14/corsi-per-tutti/">https://www.cecchipoint.it/2020/10/14/corsi-per-tutti/</a></td>
+							<td><b>08.00</b></br>Meeting at school</br></br><b>08.00 - 10.00</b></br>lessons at school (foreign students stay in the host student’s classes)</br></br>Visit to Egyptian/Cinema museum</td>
+							<td><b>08.00</b></br>Meeting at school</br></br>Visit to <a href="https://lavenaria.it/en/visit">Venaria Savoia Residence</a></td>
+							<td rowspan="3">Delegations departure</td>
+						</tr>
+				
+						<tr>
+							<td>City visit managed by the Italian students</br></br>Students and teachers back home</td>
+							<td><b>14.00 - 15.00</b></br>Free aternoon</br></br>Students and teachers back home</td>
+							<td><b>18.00</b></br>Back home</td>
+							<td><b>14.00 - 16.00</b></td>
+							<td rowspan="2">Farewell Party at school</br><b>Attendance Certificate Delivery</b></td>
+						</tr>
+					
+						<tr>
+							<td>Free evening</td>
+							<td>Free evening</td>
+							<td>Free evening</td>
+							<td>Free evening</td>
+							<td><b>20.00</b></br>Teacher's dinner only</td>
+						</tr>
+					</table>
+				</div>
+			</br></br>
+			</article>
+			
+			<!-- DEFINE THE LINK TO THE PDF AND THE LINK TO THE ARTICLE: useful for download and send by mail function-->
+			<script type="text/javascript">
+				var link = "https://www.climatecc.eu/sources/pages/meetings/it/schedule.html";
+				var pdf = "/sources/docs/pages/it/meetingInTurin.pdf";
+				
+				var innerLink = true;
+				
+				var path = "/sources/pages/meetings/it/schedule.html";
+			</script>
+			
+			<div class="downloadArticle" title="Download the article in the PDF format">
+				<table>
+					<tr>
+						<td><img src="/sources/images/pdfIcon.png" class="pdfDonwload" type="image/png" alt="PDF"><a>&emsp;</a></td>
+						<td><a id="pdfLink" href="#">Download the schedule in the PDF format</a></td>
+					</tr>
+					<tr>
+						<td><img src="/sources/images/blueMail.png" class="mailArticle" type="image/png" alt="Email"><a>&emsp;</a></td>
+						<td style="text-align: left"><a onclick="sendArticle()">Send the schedule by email</a></td>
+					</tr>
+				</table>
+			</div>
+				
+		</section>
+				
+		<style>
+			
+			#title {
+				float: left;
+				margin-top: 1%;
+				margin-bottom: 4%;
+				line-height: 37px;
+			}
+			
+			
+			section {
+				width: 90%;
+				margin: 2.5% 5% 5% 5%;
+				text-align: center;
+			}
+			
+			.plan {
+				margin: 0 5% 0 5%;
+				clear: both;
+			}
+			
+			.plan, .plan tr, .plan th, .plan td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				padding: 30px;
+			}
+			
+			.plan th {
+				background-color: lightgrey;
+				font-weight: bold;
+			}
+		</style>
+		
+		<footer> <!-- not supposed to change for each page -->
+			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
+			<div class="summary">
+				<h3>Climate Change Challenge</h3>
+				<center><table>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/facebookIcon.ico" type="image/x-icon" alt="Facebook" /></td>
+						<td>&ensp;</td>
+						<td><a href="https://www.facebook.com/profile.php?id=100092389128336" target="_blank">Follow the project on Facebook</a></td>
+					</tr>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/mail.png" type="image/png" alt="Mail" /></td>
+						<td>&ensp;</td>
+						<td><a href="mailto:info@climatecc.eu">Email us at info@climatecc.eu</a></td>
+					</tr>
+				</table></center>
+			</div>
+			<hr>
+			<p><a href="https://liceoeinsteintorino.it" target="_blank">&copy; 2023&emsp;-&emsp;Alessandro Flora @ Liceo Einstein Torino</a></p>
+			<label>Last edited on:&emsp;2023, 20<sup>th</sup> May</label>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+@media only screen and (max-width: 999px) {
+  #codes p {
+  	clear: both;
+  	line-height: 130%;
+  }
+  
+  #codes {
+  	margin-top: 2vW;
+  	margin-bottom: 2vW;
+  }
+  
+  #logo {
+  	width: 30%;
+  	height: 30%;
+  	margin-right: 0;
+  }
+  
+  #cofounder {
+  	width: 65%;
+  	height: 25%;
+  	margin-top: 6.5%;
+  }
+  
+  section, aside {
+  	position: none;
+  	width: 75%;
+  	margin-left: 12.5%;
+  	margin-right: 12.5%;
+  }
+  
+  aside {
+  	margin-bottom: 10%;
+  	text-align: center;
+  }
+ 
+ footer {
+ 	line-height: 150%;
+ }
+ 
+ .bar1, .bar2, .bar3 {
+ 	height: 2px;
+ 	width: 14px;
+ 	margin: 4px 3px;
+ }
+ 
+ .change .bar1 {
+  transform: translate(0, 6px) rotate(-45deg);
+ }
+
+ .change .bar3 {
+  transform: translate(0, -6px) rotate(45deg);
+ }
+ 
+ .menuContainer {
+ 	top: 50%;
+ }
+ 
+ #accessibility {
+ 	top: 57%;
+ }
+ 
+ #translate {
+ 	top: 64%;
+ }
+ 
+ #accessibility img, #translate img {
+ 	height: 20px;
+ }
+ 
+ #footerLogo, .summary {
+ 	position: relative;
+ 	text-align: center;
+ 	width: 80%;
+ 	margin-left: 10%;
+ 	margin-right: 10%;
+ }
+ 
+ footer table {
+ 	margin-bottom: 5vW;
+ }
+}

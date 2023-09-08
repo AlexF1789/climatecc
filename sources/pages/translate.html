@@ -1,0 +1,161 @@
+<!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE 
+
+TRANSLATION INFORMATION PAGE -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- title and metas -->
+		<title>Climate Change Challenge - Translate</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Alessandro Flora">
+		<meta name="description" content="Erasmus+ Climate Change Challenge">
+		<meta name="keywords" content="erasmus,project,einstein,liceo,high,school,climate,change,challenge">
+		<meta name="theme-color" content="#035ba5">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- stylesheet and favicon implementation -->
+		<link rel="stylesheet" href="/sources/style/style.css" type="text/css">
+		<link rel="stylesheet" href="/sources/style/mobile.css" type="text/css"> <!-- FOR MOBILE DEVICES COMPATIBILITY -->
+		<link rel="shotcut icon" href="/sources/images/favicon.ico" type="image/x-icon">
+		
+		<!-- GOOGLE FONTS implementation: used fonts are Pacifico and Open Sans -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+		
+		<!-- OPENDYSLEXIC implementation: used for increase dyslexic people possibility to access to the website -->
+		<link rel="stylesheet" href="/sources/fonts/opendyslexic.css" type="text/css"/>
+		
+	</head>
+	
+	
+	<!-- MAIN SCRIPT -->
+	<script type="text/javascript" src="/sources/script/main.js"></script>
+	
+	<!-- BROWSER DETECTION SCRIPT -->
+	<script type="text/javascript" src="/sources/script/browser.js"></script>
+	
+	<!-- SWEET ALERT 2 IMPLEMENTATION SCRIPT - all credits to https://sweetalert2.github.io/ -->
+	<script type="text/javascript" src="/sources/script/swal2.js"></script>
+	
+	<body>
+	
+		<!-- page HEADER: containing the co-founded by Erasmus+ logo and the Climate Change Challenge logo, does not variate for each page -->
+		<header>
+			<a href="/"><img id="logo" src="/sources/images/logo.jpg" type="image/jpg" alt="Climate Change Challenge" title="Climate Change Challenge"/></a>
+			<a href="https://erasmus-plus.ec.europa.eu/it" target="_blank">
+				<img id="cofounder" src="/sources/images/cofounder.jpg" type="image/jpg" alt="Co-founded by the Erasmus+ Programme of the European Union" title="Co-founded by the Erasmus+ Programme of the European Union"/>
+			</a>
+			<center>
+				<div id="codes">
+					<p>2022, 24<sup>th</sup> October - 29<sup>th</sup> October</p>
+					<label>Project no. 2021-1-FI01-KA220-SCH-000031639</label>
+				</div>
+			</center>
+		</header>
+		
+		<div class="divider"></div> <!-- not supposed to contain anything -->
+		
+		
+		<!-- NAV and 2nd divider are supposed to be hidden until the menu button is pressed -->
+		
+		<div id="hiddenMenu">
+			<nav>
+				<ul>
+					<li><a href="/" title="Go to the homepage">Homepage</a></li>
+					<li><a href="/sources/pages/schools.html" title="Go to the index of schools">Schools</a></li>
+					<li><a href="/sources/pages/info.html" title="Go to the information page">Info</a></li>
+				</ul>
+			</nav>
+		
+			<div class="divider"></div> <!-- not supposed to contain anything -->
+		</div>
+		
+		<!-- MENU: opens the navigation bar -->
+		
+		<div class="menuContainer" onclick="menuToggleAnimation(this)" title="Open the navigation menu"> 
+  			<div class="bar1"></div>
+  			<div class="bar2"></div>
+  			<div class="bar3"></div>
+		</div>
+		
+		<!-- ACCESSIBILITY BUTTON: changes the font to OpenDyslexic in order to increase readability -->
+		
+		<div id="accessibility" onclick="changeFont()" title="Change the font to OpenDyslexic">
+			<a id="sans">A</a><a id="dyslexic">a</a>
+		</div>
+		
+		<!-- COOKIES BANNER: supposed to be hidden by main.js body onload event (if the closeCookies cookie is set to yes) -->
+		
+		<div id="cookies">
+			<h6>Cookies Policy</h6>
+			<p>The website <a href="/">climatecc.eu</a> uses necessary cookies for its operations. You cannot disable them but you can read more about the
+			use we make about them on <a href="/sources/pages/cookies.html">this page</a>.</br>By closing this message or continue surfing the website you
+			are asserting you are aware of the cookies policy and you accept it in every part.</p></br>
+			<input type="button" class="closeButton" value="Close" onclick="closeCookies()" title="By closing this message or continue surfing the website you
+			are asserting you are aware of the cookies policy and you accept it in every part."/>
+		</div>
+		
+		<!-- page content: variate for each page -->
+		<section>
+			<article>
+				<h3 id="title">Translation help</h3>
+				<p id="text">The language used in the website, which is the same used by the Erasmus+ project is English. Anyway you can surf this website
+				in your language using the self-translation function implemented in browsers.</br>Here there's a guide explaining
+				how to enable it for each browser; if you're browser is not listed here we suggest you to install one of the followings.</p>
+				
+				<h4>Mozilla Firefox</h4>
+				<p>Unluckly <a href="https://mozilla.org/firefox" target="_blank">Mozilla Firefox</a> does not support natively the
+				translation function. Anyway you can download the official translation extension from <a href="https://addons.mozilla.org/firefox/addon/firefox-translations/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" target="_blank">Firefox ADD-ONS</a> website.</p>
+				
+				<h4>Google Chrome and Microsoft Edge</h4>
+				<p>On <a href="https://google.com/chrome" target="_blank">Google Chrome</a> and <a href="https://microsoft.com/edge" target="_blank">Microsoft Edge</a> there's an integrated function allowing the user to translate the pages. To use it just press the right
+				click and then click on <i>Translate in</i> followed by your language.</p>
+				
+				<h4>Opera</h4>
+				<p><a href="https://opera.com" target="_blank">Opera</a> does not support the translation function neither by default or using official extensions. You can anyway find some unofficial translation extensions on the <a href="https://addons.opera.com" target="_blank">Opera Addons</a> website.&ensp;<sup><a href="#note1">[1]</a></sup></p>
+				
+				<h4>Apple Safari</h4>
+				<p>If you're using <a href="https://www.apple.com/safari/" target="_blank">Safari</a> you should not have any problem because it supports the translation function by default. To enable it press the translation icon in the address bar.</p>
+				
+				<h4>What browser am I using?</h4>
+				<p>If you don't know which browser you're using you can <a style="cursor: pointer;" onclick="whatBrowser()">click here</a>. A popup will tell you.</p>
+								
+				</br></br>
+				<p id="note1">[1]&emsp;Climate Change Challenge is not responsible for damages you may apply on your computer by installing unofficial extensions.</p>
+				
+				</br></br></article>			
+		</section>
+		
+		<style>
+			section {
+				width: 90%;
+				margin: 2.5% 5% 5% 5%;
+				text-align: left;
+			}
+		</style>
+		
+		<footer> <!-- not supposed to change for each page -->
+			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
+			<div class="summary">
+				<h3>Climate Change Challenge</h3>
+				<center><table>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/facebookIcon.ico" type="image/x-icon" alt="Facebook" /></td>
+						<td>&ensp;</td>
+						<td><a href="https://www.facebook.com/profile.php?id=100092389128336" target="_blank">Follow the project on Facebook</a></td>
+					</tr>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/mail.png" type="image/png" alt="Mail" /></td>
+						<td>&ensp;</td>
+						<td><a href="mailto:info@climatecc.eu">Email us at info@climatecc.eu</a></td>
+					</tr>
+				</table></center>
+			</div>
+			<hr>
+			<p><a href="https://liceoeinsteintorino.it" target="_blank">&copy; 2023&emsp;-&emsp;Alessandro Flora @ Liceo Einstein Torino</a></p>
+			<label>Last edited on:&emsp;2023, 11<sup>th</sup> May</label>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,260 @@
+<!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE 
+ES MEETING REPORT-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- title and metas -->
+		<title>Climate Change Challenge - ES meeting report</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Alessandro Flora">
+		<meta name="description" content="Erasmus+ Climate Change Challenge">
+		<meta name="keywords" content="erasmus,project,einstein,liceo,high,school,climate,change,challenge">
+		<meta name="theme-color" content="#035ba5">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- stylesheet and favicon implementation -->
+		<link rel="stylesheet" href="/sources/style/style.css" type="text/css">
+		<link rel="stylesheet" href="/sources/style/mobile.css" type="text/css"> <!-- FOR MOBILE DEVICES COMPATIBILITY -->
+		<link rel="shotcut icon" href="/sources/images/favicon.ico" type="image/x-icon">
+		
+		<!-- GOOGLE FONTS implementation: used fonts are Pacifico and Open Sans -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+		
+		<!-- OPENDYSLEXIC implementation: used for increase dyslexic people possibility to access to the website -->
+		<link rel="stylesheet" href="/sources/fonts/opendyslexic.css" type="text/css"/>
+		
+	</head>
+	
+	
+	<!-- MAIN SCRIPT -->
+	<script type="text/javascript" src="/sources/script/main.js"></script>
+	
+	<!-- BROWSER DETECTION SCRIPT -->
+	<script type="text/javascript" src="/sources/script/browser.js"></script>
+	
+	<!-- SWEET ALERT 2 IMPLEMENTATION SCRIPT - all credits to https://sweetalert2.github.io/ -->
+	<script type="text/javascript" src="/sources/script/swal2.js"></script>
+	
+	<!-- MAILER EXIT CODE -->
+	<script type="text/javascript" src="/sources/script/mail.js"></script>
+	
+	<body>
+	
+		<!-- page HEADER: containing the co-founded by Erasmus+ logo and the Climate Change Challenge logo, does not variate for each page -->
+		<header>
+			<a href="/"><img id="logo" src="/sources/images/logo.jpg" type="image/jpg" alt="Climate Change Challenge" title="Climate Change Challenge"/></a>
+			<a href="https://erasmus-plus.ec.europa.eu/it" target="_blank">
+				<img id="cofounder" src="/sources/images/cofounder.jpg" type="image/jpg" alt="Co-founded by the Erasmus+ Programme of the European Union" title="Co-founded by the Erasmus+ Programme of the European Union"/>
+			</a>
+			<center>
+				<div id="codes">
+					<p>2022, 24<sup>th</sup> October - 29<sup>th</sup> October</p>
+					<label>Project no. 2021-1-FI01-KA220-SCH-000031639</label>
+				</div>
+			</center>
+		</header>
+		
+		<div class="divider"></div> <!-- not supposed to contain anything -->
+		
+		
+		<!-- NAV and 2nd divider are supposed to be hidden until the menu button is pressed -->
+		
+		<div id="hiddenMenu">
+			<nav>
+				<ul>
+					<li><a href="/" title="Go to the homepage">Homepage</a></li>
+					<li><a href="/sources/pages/schools.html" title="Go to the index of schools">Schools</a></li>
+					<li><a href="/sources/pages/info.html" title="Go to the information page">Info</a></li>
+				</ul>
+			</nav>
+		
+			<div class="divider"></div> <!-- not supposed to contain anything -->
+		</div>
+		
+		<!-- MENU: opens the navigation bar -->
+		
+		<div class="menuContainer" onclick="menuToggleAnimation(this)" title="Open the navigation menu"> 
+  			<div class="bar1"></div>
+  			<div class="bar2"></div>
+  			<div class="bar3"></div>
+		</div>
+		
+		<!-- ACCESSIBILITY BUTTON: changes the font to OpenDyslexic in order to increase readability -->
+		
+		<div id="accessibility" onclick="changeFont()" title="Change the font to OpenDyslexic">
+			<img src="/sources/images/fontToggle.png" type="image/png" alt="Aa"/>
+		</div>
+		
+		<!-- TRANSLATE BUTTON: translates the page with Google Translate -->
+		
+		<div id="translate" onclick="changeLanguage()" title="Translate to your language">
+			<img src="/sources/images/translateToggle.png" type="image/png"/>
+		</div>
+		
+		<!-- COOKIES BANNER: supposed to be hidden by main.js body onload event (if the closeCookies cookie is set to yes) -->
+		
+		<div id="cookies">
+			<h6>Cookies Policy</h6>
+			<p>The website <a href="/">climatecc.eu</a> uses necessary cookies for its operations. You cannot disable them but you can read more about the
+			use we make about them on <a href="/sources/pages/cookies.html">this page</a>.</br>By closing this message or continue surfing the website you
+			are asserting you are aware of the cookies policy and you accept it in every part.</p></br>
+			<input type="button" class="closeButton" value="Close" onclick="closeCookies()" title="By closing this message or continue surfing the website you
+			are asserting you are aware of the cookies policy and you accept it in every part."/>
+		</div>
+		
+		<!-- page content: variate for each page -->
+		<section>
+			<h3 id="title">Spain: L’Hospitalet de Llobregat meeting report</h3>
+			<a href="https://www.ins-europa.org/" target="_blank" class="schoolLogoCondensed">
+				<img class="schoolLogo" src="/sources/images/schoolLogos/es.png" type="image/png" alt="Institut Europa: Spain" title="Institut Europa: Spain" /></br>
+				<img style="height: 20px;" src="/sources/images/flags/es.png" type="image/png" alt="Spain">
+				<label title="Click to go to the school website">Institut Europa</label>
+			</a>
+			
+			<div class="subtitles">
+				<h4 style="float:left;">LTTA C2 Meeting- Minute 4</h4>&emsp;&emsp;<h4 style="color: grey;float:left;margin-left: 10%;">2023, 16<sup>th</sup> January - 20<sup>th</sup> January</h4>
+			</div>
+			<article>
+				<p id="text">
+				<i>Date:</i>&emsp;2023, January 20<sup>th</sup></br>
+				<i>Note taker:</i>&emsp;Henry Viosca</br>
+				<i>Purpose of the meeting:</i>&emsp;to organise next meeting in Lieksa, Finland</br>
+	
+				
+				</br>
+				
+				<h4>Partecipants</h4>
+				<ul>
+					<li><label>Nalan Aydin</label></li>
+					<li><label>Fikri Kerem Ekşi</label></li>
+					<li><label>Bogumiła Stempińska</label></li>
+					<li><label>Dagmara Pędraszewska-Kniec</label></li>
+					<li><label>Francesco Cicciarella</label></li>
+					<li><label>Ferdinando Cabrini</label></li>
+					<li><label>Matti Hirvonen</label></li>
+					<li><label>Terhi Nuutinen</label></li>
+					<li><label>Xavi Coll Juan</label></li>
+					<li><label>Marta Barberan Hombrados</label></li>
+					<li><label>Tea Vaakanainen</label></li>
+					<li><label>Liisa Räisänen</label></li>
+					<li><label>Luìs Francisco Sinate</label></li>
+					<li><label>Maria João Cruz Barbosa</label></li>
+					<li><label>Enrique Viosca Tornero</label></li>
+					<li><label>Josè A. Blanco Barrera</label></li>
+					<li><label>Violeta Ortiz Zamora</label></li>
+					<li><label>Darìo Casto Gonzàlez</label></li>
+					<li><label>Josep Boix Pedrazas</label></li>
+					<li><label>Olalla Muiños Ruiz</label></li>
+				</ul>
+				
+				<h4>Agreements</h4>
+				<ul>
+					<li><label>Finnish delegation asks if we have the time to have all the presentations prepared before the meeting (in 3 weeks). Everyone says yes. They commit to send all preactivities about renewable sources on Monday 23<sup>rd</sup>;</label></li>
+					<li><label>Finnish delegation asks if it is possible to send them the list of students that
+will attend that meeting (to start matching them with the host families) and
+our arrival and departure details in order to organise the reception;</label></li>
+					<li><label>Finnish commit to send the programme with some clothing recommendations next week;</label></li>
+					<li><label>since families cannot guarantee warm meals for lunch, students will take
+them from the school canteen. Finnish delegation proposes to pay for all
+the transportations in Lieksa and in exchange each country will be
+responsible for the cost of lunch of their students (approximately 6€ a day
+per person);</label></li>
+					<li><label>all products created by students have to be sent to Nalan (posters,
+presentations...);</label></li>
+					<li><label>Italian delegation (Ferdinando) commits to arrange the project website at
+their earliest convenience;</label></li>
+					<li><label>deadline to send survey questions to Turkey is on Wednesday 25<sup>th</sup>;</label></li>
+				</ul>
+				</p>
+				</br></br>
+			</article>
+			
+			<!-- DEFINE THE LINK TO THE PDF AND THE LINK TO THE ARTICLE: useful for download and send by mail function-->
+			<script type="text/javascript">
+				var link = "https://www.climatecc.eu/sources/pages/meetings/es/report.html";
+				var pdf = "/sources/docs/pages/es/reportSpain.pdf";
+				
+				var innerLink = true;
+				
+				var path = "/sources/pages/meetings/es/report.html";
+			</script>
+			
+			<div class="downloadArticle" title="Download the article in the PDF format">
+				<table>
+					<tr>
+						<td><img src="/sources/images/pdfIcon.png" class="pdfDonwload" type="image/png" alt="PDF"><a>&emsp;</a></td>
+						<td><a id="pdfLink" href="#">Download the report in the PDF format</a></td>
+					</tr>
+					<tr>
+						<td><img src="/sources/images/blueMail.png" class="mailArticle" type="image/png" alt="Email"><a>&emsp;</a></td>
+						<td style="text-align: left"><a onclick="sendArticle()">Send the report by email</a></td>
+					</tr>
+				</table>
+			</div>
+				
+		</section>
+				
+		<style>
+			
+			#title {
+				float: left;
+				margin-top: 1%;
+				line-height: 37px;
+			}
+			
+			.subtitles {
+				clear: both;
+			}
+	
+			section {
+				width: 90%;
+				margin: 2.5% 5% 0 5%;
+				text-align: left;
+			}
+			
+			article {
+				clear: both;
+			}
+			
+			.partecipants, .partecipants tr, .partecipants td, .partecipants th {
+				border: 1px solid black;
+				border-collapse: collapse;
+				text-align: center;
+			}
+			
+			.partecipants td, .partecipants th {
+				padding: 30px;
+			}
+			
+			.partecipants th {
+				background-color: lightgrey;
+				text-weigth: bold;
+			}
+		</style>
+		
+		<footer> <!-- not supposed to change for each page -->
+			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
+			<div class="summary">
+				<h3>Climate Change Challenge</h3>
+				<center><table>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/facebookIcon.ico" type="image/x-icon" alt="Facebook" /></td>
+						<td>&ensp;</td>
+						<td><a href="https://www.facebook.com/profile.php?id=100092389128336" target="_blank">Follow the project on Facebook</a></td>
+					</tr>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/mail.png" type="image/png" alt="Mail" /></td>
+						<td>&ensp;</td>
+						<td><a href="mailto:info@climatecc.eu">Email us at info@climatecc.eu</a></td>
+					</tr>
+				</table></center>
+			</div>
+			<hr>
+			<p><a href="https://liceoeinsteintorino.it" target="_blank">&copy; 2023&emsp;-&emsp;Alessandro Flora @ Liceo Einstein Torino</a></p>
+			<label>Last edited on:&emsp;2023, 19<sup>th</sup> May</label>
+		</footer>
+	</body>
+</html>
