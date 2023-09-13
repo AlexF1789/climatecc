@@ -1,5 +1,5 @@
 <a href="https://www.climatecc.eu" target="_blank">
-    <img src="https://www.climatecc.eu/sources/images/logo.jpg" type="image/jpeg" style="height: 250px;" alt="Climate Change Challenge"/>
+    <img src="https://www.climatecc.eu/sources/images/meltLogo.jpg" type="image/jpeg" alt="Climate Change Challenge"/>
 </a>
 
 ## Climate Change Challenge (Erasmus+ project) website
