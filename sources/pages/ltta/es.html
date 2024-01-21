@@ -1,12 +1,11 @@
 <!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE 
-
-TRANSLATION INFORMATION PAGE -->
+SPAIN PAGE - links to the meeting report and pictures	-->
 
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
 		<!-- title and metas -->
-		<title>Climate Change Challenge - Translate</title>
+		<title>Climate Change Challenge - Spain LTTA</title>
 		<meta charset="UTF-8">
 		<meta name="author" content="Alessandro Flora">
 		<meta name="description" content="Erasmus+ Climate Change Challenge">
@@ -38,6 +37,9 @@ TRANSLATION INFORMATION PAGE -->
 	
 	<!-- SWEET ALERT 2 IMPLEMENTATION SCRIPT - all credits to https://sweetalert2.github.io/ -->
 	<script type="text/javascript" src="/sources/script/swal2.js"></script>
+	
+	<!-- MAILER EXIT CODE -->
+	<script type="text/javascript" src="/sources/script/mail.js"></script>
 	
 	<body>
 	
@@ -84,7 +86,13 @@ TRANSLATION INFORMATION PAGE -->
 		<!-- ACCESSIBILITY BUTTON: changes the font to OpenDyslexic in order to increase readability -->
 		
 		<div id="accessibility" onclick="changeFont()" title="Change the font to OpenDyslexic">
-			<a id="sans">A</a><a id="dyslexic">a</a>
+			<img src="/sources/images/fontToggle.png" type="image/png" alt="Aa"/>
+		</div>
+		
+		<!-- TRANSLATE BUTTON: translates the page with Google Translate -->
+		
+		<div id="translate" onclick="changeLanguage()" title="Translate to your language">
+			<img src="/sources/images/translateToggle.png" type="image/png"/>
 		</div>
 		
 		<!-- COOKIES BANNER: supposed to be hidden by main.js body onload event (if the closeCookies cookie is set to yes) -->
@@ -101,41 +109,72 @@ TRANSLATION INFORMATION PAGE -->
 		<!-- page content: variate for each page -->
 		<section>
 			<article>
-				<h3 id="title">Translation help</h3>
-				<p id="text">The language used in the website, which is the same used by the Erasmus+ project is English. Anyway you can surf this website
-				in your language using the self-translation function implemented in browsers.</br>Here there's a guide explaining
-				how to enable it for each browser; if you're browser is not listed here we suggest you to install one of the followings.</p>
+				<h3 id="title">LTTA 2: Water scarcity</h3>
+				<p>It was organised in Barcelona, Spain between 2023 January 16th - 20th.<br>The main aim of the LTTA was to analyse the causes and consequences of Climate Change in water and in the environment, causing floods, droughts, devastation of fisheries, loss of biodiversity, habitat destruction as well as the change of water quality. 
+					In order to do it, students researched about it, collected data, calculated their water footprint, interviewed an activist they had chosen and presented all the information in the Erasmus meeting in Barcelona. They saw their partners' research, discussed the problem of water scarcity in international groups of 6 and looked for real solutions. They organized a campaign to raise awareness in the school, home, neighbourhood and created posters. To complete their research, they visited the desalination and purification plant in Prat de Llobregat where our local TV interviewed the students and they also attend a workshop organized by The Catalan Water Agency. They interviewed experts and created a final video with all the information obtained in the visits, workshops, team work. A video contest was held at the school. All the activities were posted on the school web, on Instagram, Facebook, Twitter and shown on our local television L-H Hospitalet del Llobregat.
+					Thanks to all these activities, the students could see that water scarcity is a problem which affects all the countries and it can be stopped if we work together. The first step was to raise awareness in our school, neighbourhood and families. So with the dissemination activities carried out, all of us are more aware and we have been able to reduce our water consumption at home, at school and in our neighbourhood. We have realised that as Climate Change is an international issue, the solutions have to be taken together and thanks to this project, the students have improved their skills such as critical thinking, problem solving, teamwork, ICT competences and communication in English. Now they are more responsible and more engaged in the school activities.  What's more, they feel more mature to participate in environmental events.</p>
 				
-				<h4>Mozilla Firefox</h4>
-				<p>Unluckly <a href="https://mozilla.org/firefox" target="_blank">Mozilla Firefox</a> does not support natively the
-				translation function. Anyway you can download the official translation extension from <a href="https://addons.mozilla.org/firefox/addon/firefox-translations/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" target="_blank">Firefox ADD-ONS</a> website.</p>
+				<h4>Presentations:</h4>
+				<ul>
+					<li><a href="/sources/docs/activities/es_posters.pdf">Posters</a></li>
+					<li><a href="https://www.youtube.com/watch?v=M2SNow6gVK4">Activities related to water scarcity</a></li>
+					<li><a href="/sources/docs/activities/activist_GeorgieBadiel.pdf">Georgie Badiel: a Burkinabé activist</a></li>
+					<li><a href="/sources/docs/activities/fi_waterScarcity.pdf">Finland: water scarcity (1)</a></li>
+					<li><a href="/sources/docs/activities/fi_waterScarcity2.pdf">Finland: water scarcity (2)</a></li>
+					<li><a href="/sources/docs/activities/fi_HelenaGualinga.pdf">Helena Gualinga: a Finnish activist</a></li>
+					<li><a href="/sources/docs/activities/it_waterScarcity.pdf">Italy: water scarcity</a></li>
+					<li><a href="/sources/docs/activities/activist_ElisaPalazzi.pdf">Elisa Palazzi: an Italian activit</a></li>
+					<li><a href="/sources/docs/activities/tr_waterScarcity.pdf">Turkey: water scarcity</a></li>
+					<li><a href="/sources/docs/activities/activist_AtlasSarrafoglu.pdf">Atlas Sarrafoğlu: a Turkish activist</a></li>
+					<li><a href="/sources/videos/pt_waterScarcity.mp4">Portugal: water scarcity (1)</a></li>
+					<li><a href="/sources/videos/pt_waterScarcity2.mp4">Portugal: water scarcity (2)</a></li>
+					<li><a href="/sources/videos/activist_JoanaTadeu.mp4">Joana Tadeu: a Portuguese activist</a></li>
+					<li><a href="https://www.youtube.com/watch?v=miHY9Wd8EUM">Poland: water scarcity</a></li>
+					<li><a href="https://www.youtube.com/watch?v=sQUoluscMyg">Spain: water scarcity</a></li>
+					<li><a href="https://www.youtube.com/watch?v=YkrRvdA_VUA">Spain: L'Hospitalet mayor receives the students</a></li>
+					<li><a href="https://www.youtube.com/watch?v=DIM9W-g8DqI">Spain: AulaL'H, educational program</a></li>
+					<li><a href="https://www.youtube.com/watch?v=9G_L1v7hf_M">Spain: water footprint</a></li>
+					<li><a href="https://www.youtube.com/watch?v=9G_L1v7hf_M">Spain: water activist</a></li>
+					<li><a href="/sources/docs/activities/es_seaWaterDisalination.pdf">Spain: sea water desalination</a></li>
+					<li><a href="https://youtu.be/3qM1NPpphJ8">Group activities in Barcelona</a></li>
+				</ul>
 				
-				<h4>Google Chrome and Microsoft Edge</h4>
-				<p>On <a href="https://google.com/chrome" target="_blank">Google Chrome</a> and <a href="https://microsoft.com/edge" target="_blank">Microsoft Edge</a> there's an integrated function allowing the user to translate the pages. To use it just press the right
-				click and then click on <i>Translate in</i> followed by your language.</p>
+				<a href="/sources/pages/pictures/es.html">Meeting pictures</a>
+
+			</br></br>
+			</article>
+			
 				
-				<h4>Opera</h4>
-				<p><a href="https://opera.com" target="_blank">Opera</a> does not support the translation function neither by default or using official extensions. You can anyway find some unofficial translation extensions on the <a href="https://addons.opera.com" target="_blank">Opera Addons</a> website.&ensp;<sup><a href="#note1">[1]</a></sup></p>
-				
-				<h4>Apple Safari</h4>
-				<p>If you're using <a href="https://www.apple.com/safari/" target="_blank">Safari</a> you should not have any problem because it supports the translation function by default. To enable it press the translation icon in the address bar.</p>
-				
-				<h4>What browser am I using?</h4>
-				<p>If you don't know which browser you're using you can <a style="cursor: pointer;" onclick="whatBrowser()">click here</a>. A popup will tell you.</p>
-								
-				</br></br>
-				<p id="note1">[1]&emsp;Climate Change Challenge is not responsible for damages you may apply on your computer by installing unofficial extensions.</p>
-				
-				</br></br></article>			
 		</section>
 		
+		<aside> <!-- supposed to contain a reference image which changes for each page, can also be hidden-->
+			<a href="https://www.ins-europa.org/" target="_blank">
+				<img class="schoolLogo" src="/sources/images/schoolLogos/es.png" type="image/png" alt="Institut Europa: Spain" title="Institut Europa: Spain" /></br>
+				<img style="height: 20px;" src="/sources/images/flags/es.png" type="image/png" alt="Spain">
+				<label title="Click to go to the school website">Institut Europa</label>
+			</a>
+		</aside>
+		
+		<!-- EDIT FOR EACH PAGE NECESSITY -->
+		<style type="text/css">
+		</style>
+		
+		
+		<!-- UNCOMMENT IF THERE ARE NO IMAGES
 		<style>
 			section {
 				width: 90%;
 				margin: 2.5% 5% 5% 5%;
-				text-align: left;
+			}
+			aside {
+				display: none;
 			}
 		</style>
+		-->
+		
+		<script type="text/javascript">
+			var path = "/sources/pages/schools/es.html";
+		</script>
 		
 		<footer> <!-- not supposed to change for each page -->
 			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
@@ -161,7 +200,7 @@ TRANSLATION INFORMATION PAGE -->
 			</div>
 			<hr>
 			<p><a onclick="contactMe()">&copy; 2023-2024&emsp;-&emsp;Alessandro Flora @ Politecnico di Torino</a></p>
-			<label>Last edited on:&emsp;2023, 11<sup>th</sup> May</label>
+			<label>Last edited on:&emsp;2023, 21<sup>st</sup> May</label>
 		</footer>
 	</body>
 </html>

@@ -37,6 +37,10 @@
  	line-height: 150%;
  }
  
+ footer a {
+	font-size: 70%;
+ }
+ 
  .bar1, .bar2, .bar3 {
  	height: 2px;
  	width: 14px;

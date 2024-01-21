@@ -1,11 +1,10 @@
-<!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE 
-FI MEETING - pictures	-->
+<!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE -->
 
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
 		<!-- title and metas -->
-		<title>Climate Change Challenge - FI meeting pictures</title>
+		<title>Climate Change Challenge - eTwinning</title>
 		<meta charset="UTF-8">
 		<meta name="author" content="Alessandro Flora">
 		<meta name="description" content="Erasmus+ Climate Change Challenge">
@@ -38,12 +37,6 @@ FI MEETING - pictures	-->
 	<!-- SWEET ALERT 2 IMPLEMENTATION SCRIPT - all credits to https://sweetalert2.github.io/ -->
 	<script type="text/javascript" src="/sources/script/swal2.js"></script>
 	
-	<!-- MAILER EXIT CODE -->
-	<script type="text/javascript" src="/sources/script/mail.js"></script>
-	
-	<!-- PICTURES SLIDESHOW -->
-	<script type="text/javascript" src="/sources/script/pictures.js"></script>
-	
 	<body>
 	
 		<!-- page HEADER: containing the co-founded by Erasmus+ logo and the Climate Change Challenge logo, does not variate for each page -->
@@ -70,6 +63,7 @@ FI MEETING - pictures	-->
 				<ul>
 					<li><a href="/" title="Go to the homepage">Homepage</a></li>
 					<li><a href="/sources/pages/schools.html" title="Go to the index of schools">Schools</a></li>
+					<li><a href="/sources/pages/activities.html" title="Go to the index of schools">Activities</a></li>
 					<li><a href="/sources/pages/info.html" title="Go to the information page">Info</a></li>
 				</ul>
 			</nav>
@@ -111,62 +105,42 @@ FI MEETING - pictures	-->
 		<!-- page content: variate for each page -->
 		<section>
 			<article>
-				<h3 id="title">Finland: Lieksa meeting</h3>
-				<img id="slideshow" src="/sources/images/finland/1.jpeg" type="image/jpeg" alt="FI meeting"/>
-			</br></br>
-			
-			<video width="90%" controls>
-  				<source src="/sources/images/finland/v1.mp4" type="video/mp4">
-  				If you see this message your browser does not support video tags.
-			</video>
-			
-			</br></br>
-			</article>
-			
-				
+				<h3 id="title">eTwinning</h3>
+				<p id="text">The task was conducted as a subproject, with a schedule aligned with the project objectives. All project updates and deliverables were shared on the twinspace.<br><b>Project ID: 143643</b></p>
+				</br></br>
+			</article>			
 		</section>
 		
-		<aside> <!-- supposed to contain a reference image which changes for each page, can also be hidden-->
-			<img class="schoolLogo" src="/sources/images/schoolLogos/fi.png" type="image/png" alt="Finland" title="Finland" /></br>
-				<img style="height: 20px;" src="/sources/images/flags/fi.png" type="image/png" alt="Finland">
-				<a href="https://www.lieksa.fi/lieksan-ylakoulu" target="_blank"><label title="Click to go to the school website">Lieksan Yläkoulu</label></a></br>
-				<img style="height: 20px;" src="/sources/images/flags/fi.png" type="image/png" alt="Finland">
-				<a href="https://www.lieksa.fi/lukio-opetus" target="_blank"><label title="Click to go to the school website">Lieksan Lukio</label></a></br></br></br></br>
 			
-			<input id="blueButton" type="button" value="Next" onclick="showNext()"/></br></br>
-			<input id="blueButton" type="button" value="Previous" onclick="showPrevious()"/></br></br>
-			<p id="status">1 / 18</p>
-		</aside>
-		
 		<!-- EDIT FOR EACH PAGE NECESSITY -->
 		<style type="text/css">
-			#slideshow {
-				width: 90%;
+			section {
+				width: 85%;
+				margin: 2.5% 5% 5% 5%;
+				text-align: left;
 			}
-			.schoolLogo {
-				height: 130px;
-				margin-right: 5%;
+			
+			article img {
+				margin-right: 10px;
+			}
+			
+			ul {
+				color: var(--mainColor);
+			}
+			
+			li {
+				line-height: 125%;
+				margin-top: 20px;
+			}
+
+			li > img {
+				height: 15px;
 			}
 		</style>
 		
 		<script type="text/javascript">
-			var min = 1;
-			var max = 18;
-			var country="finland";
-			var path = "/sources/pages/meetings/fi/pictures.html";
+			var path = "/sources/pages/activities.html";
 		</script>
-		
-		<!-- UNCOMMENT IF THERE ARE NO IMAGES
-		<style>
-			section {
-				width: 90%;
-				margin: 2.5% 5% 5% 5%;
-			}
-			aside {
-				display: none;
-			}
-		</style>
-		-->
 		
 		<footer> <!-- not supposed to change for each page -->
 			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
@@ -174,20 +148,25 @@ FI MEETING - pictures	-->
 				<h3>Climate Change Challenge</h3>
 				<center><table>
 					<tr>
-						<td><img class="footerIcon" src="/sources/images/facebookIcon.ico" type="image/x-icon" alt="Facebook" /></td>
+						<td><img class="footerIcon" src="/sources/images/facebook_logo.png" type="image/png" alt="Facebook" /></td>
 						<td>&ensp;</td>
-						<td><a href="https://www.facebook.com/profile.php?id=100092389128336" target="_blank">Follow the project on Facebook</a></td>
+						<td><a href="https://www.facebook.com/people/Climate-Change-Challenge/100091388551528/" target="_blank">Follow the project on Facebook</a></td>
 					</tr>
 					<tr>
 						<td><img class="footerIcon" src="/sources/images/mail.png" type="image/png" alt="Mail" /></td>
 						<td>&ensp;</td>
 						<td><a href="mailto:info@climatecc.eu">Email us at info@climatecc.eu</a></td>
 					</tr>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/youtube_logo.png" type="image/png" alt="Youtube" /></td>
+						<td>&ensp;</td>
+						<td><a href="https://www.youtube.com/@ClimateErasmus" target="_blank">visit our youtube channel</a></td>
+					</tr>
 				</table></center>
 			</div>
 			<hr>
-			<p><a href="https://liceoeinsteintorino.it" target="_blank">&copy; 2023&emsp;-&emsp;Alessandro Flora @ Liceo Einstein Torino</a></p>
-			<label>Last edited on:&emsp;2023, 21<sup>st</sup> May</label>
+			<p><a onclick="contactMe()">&copy; 2023-2024&emsp;-&emsp;Alessandro Flora @ Politecnico di Torino</a></p>
+			<label>Last edited on:&emsp;2024, 20<sup>th</sup> January</label>
 		</footer>
 	</body>
 </html>

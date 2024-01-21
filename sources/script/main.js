@@ -90,3 +90,47 @@ function changeLanguage() {
 	}
 }
 
+function contactMe() {
+	Swal.fire({
+		  title: 'Contact me',
+		  icon: 'info',
+		  html:
+			'<div class="contacts" onclick="redirect(1)">' +
+				'<img src="https://www.climatecc.eu/sources/images/telegramLogo.svg" type="image/svg" alt="Telegram"/><a>Contact me on Telegram</a>' +
+			'</div>' +
+			'<div class="contacts" onclick="redirect(2)">' +
+				'<img src="https://www.climatecc.eu/sources/images/blueMail.png" type="image/png" alt="Mail"/><a>Send me an email</a>' +
+			'</div>' +
+			'<div class="contacts" onclick="redirect(4)">' +
+				'<img src="https://www.climatecc.eu/sources/images/insta.png" type="image/png" alt="Instagram"/><a>Follow me on Instagram</a>' +
+			'</div>' +
+			'<div class="contacts" onclick="redirect(3)">' +
+				'<img src="https://www.climatecc.eu/sources/images/gitMark.png" type="image/png" alt="GitHub"/><a>Visit the GitHub repo</a>' +
+			'</div>',
+		  showCloseButton: true,
+		  imageHeight: 500
+		})
+}
+
+function redirect(a) {
+	var link;
+	switch(a) {
+		case 1:
+			link = "https://t.me/AlexF1789";
+			break;
+		case 2:
+			link = "mailto:alex@climatecc.eu";
+			break;
+		case 3:
+			link = "https://www.github.com/AlexF1789/climatecc";
+			break;
+		case 4:
+			link = "https://www.instagram.com/pr35.flo/";
+			break;
+		default:
+			link = "";
+			break;
+	}
+	
+	window.open(link, '_blank');
+}

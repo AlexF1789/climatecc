@@ -1,11 +1,11 @@
 <!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE 
-PT TPM MEETING SCHEDULE-->
+ES MEETING - pictures	-->
 
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
 		<!-- title and metas -->
-		<title>Climate Change Challenge - PT TPM meeting schedule</title>
+		<title>Climate Change Challenge - ES meeting pictures</title>
 		<meta charset="UTF-8">
 		<meta name="author" content="Alessandro Flora">
 		<meta name="description" content="Erasmus+ Climate Change Challenge">
@@ -41,6 +41,9 @@ PT TPM MEETING SCHEDULE-->
 	<!-- MAILER EXIT CODE -->
 	<script type="text/javascript" src="/sources/script/mail.js"></script>
 	
+	<!-- PICTURES SLIDESHOW -->
+	<script type="text/javascript" src="/sources/script/pictures.js"></script>
+	
 	<body>
 	
 		<!-- page HEADER: containing the co-founded by Erasmus+ logo and the Climate Change Challenge logo, does not variate for each page -->
@@ -67,6 +70,7 @@ PT TPM MEETING SCHEDULE-->
 				<ul>
 					<li><a href="/" title="Go to the homepage">Homepage</a></li>
 					<li><a href="/sources/pages/schools.html" title="Go to the index of schools">Schools</a></li>
+					<li><a href="/sources/pages/activities.html" title="Go to the index of schools">Activities</a></li>
 					<li><a href="/sources/pages/info.html" title="Go to the information page">Info</a></li>
 				</ul>
 			</nav>
@@ -108,99 +112,52 @@ PT TPM MEETING SCHEDULE-->
 		<!-- page content: variate for each page -->
 		<section>
 			<article>
-				<h3 id="title">Portugal: Lisbon TPM meeting schedule</h3>
-				<a href="https://www.epar.pt/" target="_blank" class="schoolLogoCondensed">
-					<img class="schoolLogo" src="/sources/images/schoolLogos/pt.png" type="image/png" alt="Escola Profissional Almirante Reis: Portugal" title="Escola Profissional Almirante Reis: Portugal" /></br>
-					<img style="height: 20px;" src="/sources/images/flags/pt.png" type="image/png" alt="Portugal">
-					<label title="Click to go to the school website">Escola Profissional Almirante Reis</label>
-				</a>
-				<div style="width: 100%; overflow-x: auto">
-					<table class="plan">
-					
-						<tr>
-							<th>2022, April Thursday 21<sup>st</sup></th>
-							<th>2022, April Friday 22<sup>nd</sup></th>
-							<th>2022, April Saturday 23<sup>rd</sup></th>
-						</tr>
-						
-						<tr>
-							<td rowspan="3">Arrival day</td>
-							<td><b>9.30 - 12.30</b></br>Application review and preparation of upcoming mobilities</td>
-							<td><b>9.00 - 12.00</b></br>ICT Workshop (wixsite)</td>
-						</tr>
-				
-						<tr>
-							<td><b>12.30 - 14.00</b></br>Lunch</td>
-							<td><b>12.00 - 15.00</b></br>Official lunch offered by the school</td>
-						</tr>
-					
-						<tr>
-							<td><b>14.00 - 16.00</b></br>Etwinning workshop</td>
-							<td><b>15.00 - 17.00</b></br>Guided Lisbon Tour</td>
-						</tr>
-						
-					</table>
-				</div>
+				<h3 id="title">Spain: L’Hospitalet de Llobregat meeting</h3>
+				<img id="slideshow" src="/sources/images/spain/1.jpeg" type="image/jpeg" alt="ES meeting"/>
 			</br></br>
+			
 			</article>
 			
-			<!-- DEFINE THE LINK TO THE PDF AND THE LINK TO THE ARTICLE: useful for download and send by mail function-->
-			<script type="text/javascript">
-				var link = "https://www.climatecc.eu/sources/pages/meetings/pt/tpm/schedule.html";
-				var pdf = "/sources/docs/pages/pt/scheduleTPM.pdf";
-				
-				var innerLink = true;
-				
-				var path = "/sources/pages/meetings/pt/tpm/schedule.html";
-			</script>
-			
-			<div class="downloadArticle" title="Download the article in the PDF format">
-				<table>
-					<tr>
-						<td><img src="/sources/images/pdfIcon.png" class="pdfDonwload" type="image/png" alt="PDF"><a>&emsp;</a></td>
-						<td><a id="pdfLink" href="#">Download the schedule in the PDF format</a></td>
-					</tr>
-					<tr>
-						<td><img src="/sources/images/blueMail.png" class="mailArticle" type="image/png" alt="Email"><a>&emsp;</a></td>
-						<td style="text-align: left"><a onclick="sendArticle()">Send the schedule by email</a></td>
-					</tr>
-				</table>
-			</div>
 				
 		</section>
-				
-		<style>
+		
+		<aside> <!-- supposed to contain a reference image which changes for each page, can also be hidden-->
+			<a href="https://www.ins-europa.org/" target="_blank">
+				<img class="schoolLogo" src="/sources/images/schoolLogos/es.png" type="image/png" alt="Institut Europa: Spain" title="Institut Europa: Spain" /></br>
+				<img style="height: 20px;" src="/sources/images/flags/es.png" type="image/png" alt="Spain">
+				<label title="Click to go to the school website">Institut Europa</label>
+			</a></br></br></br></br>
 			
-			#title {
-				float: left;
-				margin-top: 1%;
-				margin-bottom: 4%;
-				line-height: 37px;
+			<input id="blueButton" type="button" value="Next" onclick="showNext()"/></br></br>
+			<input id="blueButton" type="button" value="Previous" onclick="showPrevious()"/></br></br>
+			<p id="status">1 / 6</p>
+		</aside>
+		
+		<!-- EDIT FOR EACH PAGE NECESSITY -->
+		<style type="text/css">
+			#slideshow {
+				width: 90%;
 			}
-			
-			
+		</style>
+		
+		<script type="text/javascript">
+			var min = 1;
+			var max = 6;
+			var country="spain";
+			var path = "/sources/pages/meetings/es/pictures.html"
+		</script>
+		
+		<!-- UNCOMMENT IF THERE ARE NO IMAGES
+		<style>
 			section {
 				width: 90%;
 				margin: 2.5% 5% 5% 5%;
-				text-align: center;
 			}
-			
-			.plan {
-				margin: 0 5% 0 5%;
-				clear: both;
-			}
-			
-			.plan, .plan tr, .plan th, .plan td {
-				border: 1px solid black;
-				border-collapse: collapse;
-				padding: 30px;
-			}
-			
-			.plan th {
-				background-color: lightgrey;
-				font-weight: bold;
+			aside {
+				display: none;
 			}
 		</style>
+		-->
 		
 		<footer> <!-- not supposed to change for each page -->
 			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
@@ -208,14 +165,19 @@ PT TPM MEETING SCHEDULE-->
 				<h3>Climate Change Challenge</h3>
 				<center><table>
 					<tr>
-						<td><img class="footerIcon" src="/sources/images/facebookIcon.ico" type="image/x-icon" alt="Facebook" /></td>
+						<td><img class="footerIcon" src="/sources/images/facebook_logo.png" type="image/png" alt="Facebook" /></td>
 						<td>&ensp;</td>
-						<td><a href="https://www.facebook.com/profile.php?id=100092389128336" target="_blank">Follow the project on Facebook</a></td>
+						<td><a href="https://www.facebook.com/people/Climate-Change-Challenge/100091388551528/" target="_blank">Follow the project on Facebook</a></td>
 					</tr>
 					<tr>
 						<td><img class="footerIcon" src="/sources/images/mail.png" type="image/png" alt="Mail" /></td>
 						<td>&ensp;</td>
 						<td><a href="mailto:info@climatecc.eu">Email us at info@climatecc.eu</a></td>
+					</tr>
+					<tr>
+						<td><img class="footerIcon" src="/sources/images/youtube_logo.png" type="image/png" alt="Youtube" /></td>
+						<td>&ensp;</td>
+						<td><a href="https://www.youtube.com/@ClimateErasmus" target="_blank">visit our youtube channel</a></td>
 					</tr>
 				</table></center>
 			</div>

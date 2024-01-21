@@ -1,6 +1,6 @@
 <?php
 
-	require '/sources/php/mailer/mailsender.php'; //complete with path to site
+	require '/web/htdocs/www.climatecc.eu/home/sources/php/mailer/mailsender.php';
 	
 	
 	if($_SERVER['REQUEST_METHOD']=="POST") {

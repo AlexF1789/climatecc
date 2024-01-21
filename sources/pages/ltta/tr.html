@@ -1,12 +1,11 @@
 <!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE 
-
-TRANSLATION INFORMATION PAGE -->
+TURKEY PAGE - links to the future meeting	-->
 
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
 		<!-- title and metas -->
-		<title>Climate Change Challenge - Translate</title>
+		<title>Climate Change Challenge - Turkey LTTA</title>
 		<meta charset="UTF-8">
 		<meta name="author" content="Alessandro Flora">
 		<meta name="description" content="Erasmus+ Climate Change Challenge">
@@ -38,6 +37,9 @@ TRANSLATION INFORMATION PAGE -->
 	
 	<!-- SWEET ALERT 2 IMPLEMENTATION SCRIPT - all credits to https://sweetalert2.github.io/ -->
 	<script type="text/javascript" src="/sources/script/swal2.js"></script>
+	
+	<!-- MAILER EXIT CODE -->
+	<script type="text/javascript" src="/sources/script/mail.js"></script>
 	
 	<body>
 	
@@ -84,8 +86,18 @@ TRANSLATION INFORMATION PAGE -->
 		<!-- ACCESSIBILITY BUTTON: changes the font to OpenDyslexic in order to increase readability -->
 		
 		<div id="accessibility" onclick="changeFont()" title="Change the font to OpenDyslexic">
-			<a id="sans">A</a><a id="dyslexic">a</a>
+			<img src="/sources/images/fontToggle.png" type="image/png" alt="Aa"/>
 		</div>
+		
+		<!-- TRANSLATE BUTTON: translates the page with Google Translate -->
+		
+		<div id="translate" onclick="changeLanguage()" title="Translate to your language">
+			<img src="/sources/images/translateToggle.png" type="image/png"/>
+		</div>
+		
+		<script type="text/javascript">
+			var path = "/sources/pages/schools/tr.html";
+		</script>
 		
 		<!-- COOKIES BANNER: supposed to be hidden by main.js body onload event (if the closeCookies cookie is set to yes) -->
 		
@@ -100,42 +112,55 @@ TRANSLATION INFORMATION PAGE -->
 		
 		<!-- page content: variate for each page -->
 		<section>
+
 			<article>
-				<h3 id="title">Translation help</h3>
-				<p id="text">The language used in the website, which is the same used by the Erasmus+ project is English. Anyway you can surf this website
-				in your language using the self-translation function implemented in browsers.</br>Here there's a guide explaining
-				how to enable it for each browser; if you're browser is not listed here we suggest you to install one of the followings.</p>
+				<h3 id="title">LTTA 6: Global Warming </h3>
+				<p>It was organised at Gazi Anadolu Lisesi in Turkey on 20-24 November 2023.<br>All the activities were completed as planned in the application form. The main subjects of the LTTA were global warming and the impacts of human action on it. All the partner schools attended the meeting with their ready presentations which they had prepared about global warming. The objectives of the LTTA were to highlight the relation between global warming and climate change and to make students became more aware of impacts of human action on it, and also direct them to find out solutions by making lifestyle changes. Through the following activities, we could reach our desired objectives:
+					Climate change club meeting was held. Both host and guest students presented their presentations that they had prepared about global warming issue with which their own countries face. After the presentations were presented, we directed students to discuss the presentations. We encouraged them to comment on especially those actions of each of us that have impacts on global warming by giving simple examples from real life. We analysed each of students’ comment until students realized the relation between global warming and climate change, and the effect of them on the world. We divided them into groups consisting students from each partner school and then we asked students what their action plans to tackle global warming, including personal sacrifice and commitment. Each group came up with different action plans. By unanimous vote, the 2nd group's idea of changing clothes was accepted to be implemented in all schools. In order to publicise the activity, students prepared a poster and this poster was used in all partner schools. Within the scope of the activity, students in all partner schools brought the clothes they did not wear. The collected clothes were exhibited on the announced date and distributed free of charge to students in need. With this activity, recycling awareness was created in students. All the groups visited Canik Nature and Science School in the region of the host school. The authorized persons gave information about the impacts of global warming on wildlife and students did activities about climate change. Brainstorming activity for global warming was done. Mixed groups of students created posters including catchy slogans about global warming. Coordinators meeting was held to review and update the Climate Change Challenge Module and evaluate the project process. The final version of the module was determined with mutual exchange of ideas. An event was organised at the host school to disseminate the project. The participants from partner schools, teachers and students from host school and parents of the host students and school board joined the event. During the week, all the guest students were hosted by the Turkish families which provided cultural exchange between students and help them get rid of bias towards different nations. A certification ceremony was organized and each group expressed their experiences and the knowledge that they obtained during the week.</p>
+			
+				<h4>Presentations:</h4>
+				<ul>
+					<li><a href="https://youtu.be/AnODszPWyvo">Meeting summary</a></li>
+					<li><a href="/sources/docs/activities/tr_globalWarming.pdf">Turkey: Global warming</a></li>
+					<li><a href="/sources/docs/activities/tr_globalWarmingModule.pdf">Turkey: Global warming module</a></li>
+
+					<li><a href="https://youtu.be/58kwWYCGUdg?feature=shared">Spain: Global warming</a></li>
+					<li><a href="/sources/docs/activities/activist_RaquelMonton.pdf">Raquel Montón: a Spanish activist</a></li>
+					<li><a href="https://youtu.be/AnODszPWyvo">Turkey: changing clothes day</a></li>
+
+				</ul>
+			</article>	
 				
-				<h4>Mozilla Firefox</h4>
-				<p>Unluckly <a href="https://mozilla.org/firefox" target="_blank">Mozilla Firefox</a> does not support natively the
-				translation function. Anyway you can download the official translation extension from <a href="https://addons.mozilla.org/firefox/addon/firefox-translations/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" target="_blank">Firefox ADD-ONS</a> website.</p>
-				
-				<h4>Google Chrome and Microsoft Edge</h4>
-				<p>On <a href="https://google.com/chrome" target="_blank">Google Chrome</a> and <a href="https://microsoft.com/edge" target="_blank">Microsoft Edge</a> there's an integrated function allowing the user to translate the pages. To use it just press the right
-				click and then click on <i>Translate in</i> followed by your language.</p>
-				
-				<h4>Opera</h4>
-				<p><a href="https://opera.com" target="_blank">Opera</a> does not support the translation function neither by default or using official extensions. You can anyway find some unofficial translation extensions on the <a href="https://addons.opera.com" target="_blank">Opera Addons</a> website.&ensp;<sup><a href="#note1">[1]</a></sup></p>
-				
-				<h4>Apple Safari</h4>
-				<p>If you're using <a href="https://www.apple.com/safari/" target="_blank">Safari</a> you should not have any problem because it supports the translation function by default. To enable it press the translation icon in the address bar.</p>
-				
-				<h4>What browser am I using?</h4>
-				<p>If you don't know which browser you're using you can <a style="cursor: pointer;" onclick="whatBrowser()">click here</a>. A popup will tell you.</p>
-								
-				</br></br>
-				<p id="note1">[1]&emsp;Climate Change Challenge is not responsible for damages you may apply on your computer by installing unofficial extensions.</p>
-				
-				</br></br></article>			
 		</section>
 		
+		<aside> <!-- supposed to contain a reference image which changes for each page, can also be hidden-->
+			<a href="https://ilkadimgal.meb.k12.tr/" target="_blank">
+				<img class="schoolLogo" src="/sources/images/schoolLogos/tr.png" type="image/png" alt="Gazi Anadolu Lisesi: Turkey" title="Gazi Anadolu Lisesi: Turkey"/></br>
+				<img style="height: 20px;" src="/sources/images/flags/tr.png" type="image/png" alt="Turkey">
+				<label title="Click to go to the school website">Gazi Anadolu Lisesi</label>
+			</a>
+		</aside>
+		
+		<!-- EDIT FOR EACH PAGE NECESSITY -->
+		<style type="text/css">
+			.schoolLogo {
+				height: 200px;
+				margin-right: 5%;
+			}
+		</style>
+		
+		
+		<!-- UNCOMMENT IF THERE ARE NO IMAGES
 		<style>
 			section {
 				width: 90%;
 				margin: 2.5% 5% 5% 5%;
-				text-align: left;
+			}
+			aside {
+				display: none;
 			}
 		</style>
+		-->
 		
 		<footer> <!-- not supposed to change for each page -->
 			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
@@ -161,7 +186,7 @@ TRANSLATION INFORMATION PAGE -->
 			</div>
 			<hr>
 			<p><a onclick="contactMe()">&copy; 2023-2024&emsp;-&emsp;Alessandro Flora @ Politecnico di Torino</a></p>
-			<label>Last edited on:&emsp;2023, 11<sup>th</sup> May</label>
+			<label>Last edited on:&emsp;2024, 20<sup>th</sup> January</label>
 		</footer>
 	</body>
 </html>

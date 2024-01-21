@@ -1,12 +1,10 @@
-<!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE 
-
-TRANSLATION INFORMATION PAGE -->
+<!-- CLIMATE CHANGE CHALLENGE WEBSITE - created by Alessandro Flora, Liceo Einstein Torino - tested on Firefox, Chrome, Opera and Edge; not compatible with IE -->
 
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
 		<!-- title and metas -->
-		<title>Climate Change Challenge - Translate</title>
+		<title>Climate Change Challenge - LTTAs Activities</title>
 		<meta charset="UTF-8">
 		<meta name="author" content="Alessandro Flora">
 		<meta name="description" content="Erasmus+ Climate Change Challenge">
@@ -84,7 +82,13 @@ TRANSLATION INFORMATION PAGE -->
 		<!-- ACCESSIBILITY BUTTON: changes the font to OpenDyslexic in order to increase readability -->
 		
 		<div id="accessibility" onclick="changeFont()" title="Change the font to OpenDyslexic">
-			<a id="sans">A</a><a id="dyslexic">a</a>
+			<img src="/sources/images/fontToggle.png" type="image/png" alt="Aa"/>
+		</div>
+		
+		<!-- TRANSLATE BUTTON: translates the page with Google Translate -->
+		
+		<div id="translate" onclick="changeLanguage()" title="Translate to your language">
+			<img src="/sources/images/translateToggle.png" type="image/png"/>
 		</div>
 		
 		<!-- COOKIES BANNER: supposed to be hidden by main.js body onload event (if the closeCookies cookie is set to yes) -->
@@ -101,41 +105,58 @@ TRANSLATION INFORMATION PAGE -->
 		<!-- page content: variate for each page -->
 		<section>
 			<article>
-				<h3 id="title">Translation help</h3>
-				<p id="text">The language used in the website, which is the same used by the Erasmus+ project is English. Anyway you can surf this website
-				in your language using the self-translation function implemented in browsers.</br>Here there's a guide explaining
-				how to enable it for each browser; if you're browser is not listed here we suggest you to install one of the followings.</p>
-				
-				<h4>Mozilla Firefox</h4>
-				<p>Unluckly <a href="https://mozilla.org/firefox" target="_blank">Mozilla Firefox</a> does not support natively the
-				translation function. Anyway you can download the official translation extension from <a href="https://addons.mozilla.org/firefox/addon/firefox-translations/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search" target="_blank">Firefox ADD-ONS</a> website.</p>
-				
-				<h4>Google Chrome and Microsoft Edge</h4>
-				<p>On <a href="https://google.com/chrome" target="_blank">Google Chrome</a> and <a href="https://microsoft.com/edge" target="_blank">Microsoft Edge</a> there's an integrated function allowing the user to translate the pages. To use it just press the right
-				click and then click on <i>Translate in</i> followed by your language.</p>
-				
-				<h4>Opera</h4>
-				<p><a href="https://opera.com" target="_blank">Opera</a> does not support the translation function neither by default or using official extensions. You can anyway find some unofficial translation extensions on the <a href="https://addons.opera.com" target="_blank">Opera Addons</a> website.&ensp;<sup><a href="#note1">[1]</a></sup></p>
-				
-				<h4>Apple Safari</h4>
-				<p>If you're using <a href="https://www.apple.com/safari/" target="_blank">Safari</a> you should not have any problem because it supports the translation function by default. To enable it press the translation icon in the address bar.</p>
-				
-				<h4>What browser am I using?</h4>
-				<p>If you don't know which browser you're using you can <a style="cursor: pointer;" onclick="whatBrowser()">click here</a>. A popup will tell you.</p>
-								
+				<h3 id="title">LTTAs Activities</h3>
+				<p id="text">
+                    From this page you can have an overall view of each LTTA meeting.<br><br>
+					<ul>
+
+						<li><a href="/sources/pages/ltta/it.html">LTTA 1: Recycling</a></li>
+						<li><a href="/sources/pages/ltta/es.html">LTTA 2: Water Scarcity</a></li>
+						<li><a href="/sources/pages/ltta/fi.html">LTTA 3: Renewable Energies</a></li>
+						<li><a href="/sources/pages/ltta/pl.html">LTTA 4: Combating Climate Change</a></li>
+						<li><a href="/sources/pages/ltta/pt.html">LTTA 5: Deforestation</a></li>
+						<li><a href="/sources/pages/ltta/tr.html">LTTA 6: Global Warming</a></li>
+
+						<br><br>
+
+						<li><a href="/sources/pages/products/index.html">Project Products</a></li>
+
+					</ul>
+				</p>
 				</br></br>
-				<p id="note1">[1]&emsp;Climate Change Challenge is not responsible for damages you may apply on your computer by installing unofficial extensions.</p>
-				
-				</br></br></article>			
+			</article>			
 		</section>
 		
-		<style>
+			
+		<!-- EDIT FOR EACH PAGE NECESSITY -->
+		<style type="text/css">
 			section {
-				width: 90%;
+				width: 85%;
 				margin: 2.5% 5% 5% 5%;
 				text-align: left;
 			}
+			
+			article img {
+				margin-right: 10px;
+			}
+			
+			ul {
+				color: var(--mainColor);
+			}
+			
+			li {
+				line-height: 125%;
+				margin-top: 20px;
+			}
+
+			li > img {
+				height: 15px;
+			}
 		</style>
+		
+		<script type="text/javascript">
+			var path = "/sources/pages/activities.html";
+		</script>
 		
 		<footer> <!-- not supposed to change for each page -->
 			<a href="/"><img id="footerLogo" src="/sources/images/footerLogo.png" type="image/png" alt="Climate Change Challenge" title="Climate Change Challenge" /></a>
@@ -161,7 +182,7 @@ TRANSLATION INFORMATION PAGE -->
 			</div>
 			<hr>
 			<p><a onclick="contactMe()">&copy; 2023-2024&emsp;-&emsp;Alessandro Flora @ Politecnico di Torino</a></p>
-			<label>Last edited on:&emsp;2023, 11<sup>th</sup> May</label>
+			<label>Last edited on:&emsp;2024, 20<sup>th</sup> January</label>
 		</footer>
 	</body>
 </html>
