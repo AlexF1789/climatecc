@@ -100,7 +100,7 @@ class PHPMailer
 
     /**
      * The envelope sender of the message.
-     * This will usually be turned into a Return-Path header by the receiver,
+     * This will usually be turned into a Return-path_debug header by the receiver,
      * and is the address that bounces will be sent to.
      * If not empty, will be passed via `-f` to sendmail or as the 'MAIL FROM' value over SMTP.
      *
@@ -185,7 +185,7 @@ class PHPMailer
     public $Mailer = 'mail';
 
     /**
-     * The path to the sendmail program.
+     * The path_debug to the sendmail program.
      *
      * @var string
      */
@@ -411,7 +411,7 @@ class PHPMailer
      * Whether to generate VERP addresses on send.
      * Only applicable when sending via SMTP.
      *
-     * @see https://en.wikipedia.org/wiki/Variable_envelope_return_path
+     * @see https://en.wikipedia.org/wiki/Variable_envelope_return_path_debug
      * @see http://www.postfix.org/VERP_README.html Postfix VERP info
      *
      * @var bool
@@ -474,7 +474,7 @@ class PHPMailer
     public $DKIM_extraHeaders = [];
 
     /**
-     * DKIM private key file path.
+     * DKIM private key file path_debug.
      *
      * @var string
      */
@@ -654,21 +654,21 @@ class PHPMailer
     protected $error_count = 0;
 
     /**
-     * The S/MIME certificate file path.
+     * The S/MIME certificate file path_debug.
      *
      * @var string
      */
     protected $sign_cert_file = '';
 
     /**
-     * The S/MIME key file path.
+     * The S/MIME key file path_debug.
      *
      * @var string
      */
     protected $sign_key_file = '';
 
     /**
-     * The optional S/MIME extra certificates ("CA Chain") file path.
+     * The optional S/MIME extra certificates ("CA Chain") file path_debug.
      *
      * @var string
      */
@@ -773,7 +773,7 @@ class PHPMailer
 
     /**
      * Call mail() in a safe_mode-aware fashion.
-     * Also, unless sendmail_path points to sendmail (or something that
+     * Also, unless sendmail_path_debug points to sendmail (or something that
      * claims to be sendmail), don't pass params (not a perfect fix,
      * but it will do).
      *
@@ -896,12 +896,12 @@ class PHPMailer
      */
     public function isSendmail()
     {
-        $ini_sendmail_path = ini_get('sendmail_path');
+        $ini_sendmail_path_debug = ini_get('sendmail_path_debug');
 
-        if (false === stripos($ini_sendmail_path, 'sendmail')) {
+        if (false === stripos($ini_sendmail_path_debug, 'sendmail')) {
             $this->Sendmail = '/usr/sbin/sendmail';
         } else {
-            $this->Sendmail = $ini_sendmail_path;
+            $this->Sendmail = $ini_sendmail_path_debug;
         }
         $this->Mailer = 'sendmail';
     }
@@ -911,12 +911,12 @@ class PHPMailer
      */
     public function isQmail()
     {
-        $ini_sendmail_path = ini_get('sendmail_path');
+        $ini_sendmail_path_debug = ini_get('sendmail_path_debug');
 
-        if (false === stripos($ini_sendmail_path, 'qmail')) {
+        if (false === stripos($ini_sendmail_path_debug, 'qmail')) {
             $this->Sendmail = '/var/qmail/bin/qmail-inject';
         } else {
-            $this->Sendmail = $ini_sendmail_path;
+            $this->Sendmail = $ini_sendmail_path_debug;
         }
         $this->Mailer = 'qmail';
     }
@@ -1192,7 +1192,7 @@ class PHPMailer
      * Return the Message-ID header of the last email.
      * Technically this is the value from the last time the headers were created,
      * but it's also the message ID of the last sent message except in
-     * pathological cases.
+     * path_debugological cases.
      *
      * @return string
      */
@@ -1472,7 +1472,7 @@ class PHPMailer
                 and !empty($this->DKIM_selector)
                 and (!empty($this->DKIM_private_string)
                     or (!empty($this->DKIM_private)
-                        and static::isPermittedPath($this->DKIM_private)
+                        and static::isPermittedpath_debug($this->DKIM_private)
                         and file_exists($this->DKIM_private)
                     )
                 )
@@ -1652,35 +1652,35 @@ class PHPMailer
     }
 
     /**
-     * Check whether a file path is of a permitted type.
-     * Used to reject URLs and phar files from functions that access local file paths,
+     * Check whether a file path_debug is of a permitted type.
+     * Used to reject URLs and phar files from functions that access local file path_debugs,
      * such as addAttachment.
      *
-     * @param string $path A relative or absolute path to a file
+     * @param string $path_debug A relative or absolute path_debug to a file
      *
      * @return bool
      */
-    protected static function isPermittedPath($path)
+    protected static function isPermittedpath_debug($path_debug)
     {
-        return !preg_match('#^[a-z]+://#i', $path);
+        return !preg_match('#^[a-z]+://#i', $path_debug);
     }
 
     /**
-     * Check whether a file path is safe, accessible, and readable.
+     * Check whether a file path_debug is safe, accessible, and readable.
      *
-     * @param string $path A relative or absolute path to a file
+     * @param string $path_debug A relative or absolute path_debug to a file
      *
      * @return bool
      */
-    protected static function fileIsAccessible($path)
+    protected static function fileIsAccessible($path_debug)
     {
-        if (!static::isPermittedPath($path)) {
+        if (!static::isPermittedpath_debug($path_debug)) {
             return false;
         }
-        $readable = file_exists($path);
-        //If not a UNC path (expected to start with \\), check read permission, see #2069
-        if (strpos($path, '\\\\') !== 0) {
-            $readable = $readable && is_readable($path);
+        $readable = file_exists($path_debug);
+        //If not a UNC path_debug (expected to start with \\), check read permission, see #2069
+        if (strpos($path_debug, '\\\\') !== 0) {
+            $readable = $readable && is_readable($path_debug);
         }
         return  $readable;
     }
@@ -1706,7 +1706,7 @@ class PHPMailer
         $to = implode(', ', $toArr);
 
         $params = null;
-        //This sets the SMTP envelope sender which gets turned into a return-path header by the receiver
+        //This sets the SMTP envelope sender which gets turned into a return-path_debug header by the receiver
         if (!empty($this->Sender) and static::validateAddress($this->Sender)) {
             //A space after `-f` is optional, but there is a long history of its presence
             //causing problems, so we don't use one
@@ -2019,11 +2019,11 @@ class PHPMailer
      * The default language is English.
      *
      * @param string $langcode  ISO 639-1 2-character language code (e.g. French is "fr")
-     * @param string $lang_path Path to the language file directory, with trailing separator (slash)
+     * @param string $lang_path_debug path_debug to the language file directory, with trailing separator (slash)
      *
      * @return bool
      */
-    public function setLanguage($langcode = 'en', $lang_path = '')
+    public function setLanguage($langcode = 'en', $lang_path_debug = '')
     {
         // Backwards compatibility for renamed language codes
         $renamed_langcodes = [
@@ -2062,19 +2062,19 @@ class PHPMailer
             'variable_set' => 'Cannot set or reset variable: ',
             'extension_missing' => 'Extension missing: ',
         ];
-        if (empty($lang_path)) {
-            // Calculate an absolute path so it can work if CWD is not here
-            $lang_path = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'language' . DIRECTORY_SEPARATOR;
+        if (empty($lang_path_debug)) {
+            // Calculate an absolute path_debug so it can work if CWD is not here
+            $lang_path_debug = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'language' . DIRECTORY_SEPARATOR;
         }
         //Validate $langcode
         if (!preg_match('/^[a-z]{2}(?:_[a-zA-Z]{2})?$/', $langcode)) {
             $langcode = 'en';
         }
         $foundlang = true;
-        $lang_file = $lang_path . 'phpmailer.lang-' . $langcode . '.php';
+        $lang_file = $lang_path_debug . 'phpmailer.lang-' . $langcode . '.php';
         // There is no English translation file
         if ('en' != $langcode) {
-            // Make sure language file path is readable
+            // Make sure language file path_debug is readable
             if (!static::fileIsAccessible($lang_file)) {
                 $foundlang = false;
             } else {
@@ -2677,16 +2677,16 @@ class PHPMailer
                     $sign = @openssl_pkcs7_sign(
                         $file,
                         $signed,
-                        'file://' . realpath($this->sign_cert_file),
-                        ['file://' . realpath($this->sign_key_file), $this->sign_key_pass],
+                        'file://' . realpath_debug($this->sign_cert_file),
+                        ['file://' . realpath_debug($this->sign_key_file), $this->sign_key_pass],
                         []
                     );
                 } else {
                     $sign = @openssl_pkcs7_sign(
                         $file,
                         $signed,
-                        'file://' . realpath($this->sign_cert_file),
-                        ['file://' . realpath($this->sign_key_file), $this->sign_key_pass],
+                        'file://' . realpath_debug($this->sign_cert_file),
+                        ['file://' . realpath_debug($this->sign_key_file), $this->sign_key_pass],
                         [],
                         PKCS7_DETACHED,
                         $this->sign_extracerts_file
@@ -2810,13 +2810,13 @@ class PHPMailer
     }
 
     /**
-     * Add an attachment from a path on the filesystem.
-     * Never use a user-supplied path to a file!
+     * Add an attachment from a path_debug on the filesystem.
+     * Never use a user-supplied path_debug to a file!
      * Returns false if the file could not be found or read.
      * Explicitly *does not* support passing URLs; PHPMailer is not an HTTP client.
      * If you need to do that, fetch the resource yourself and pass it in via a local file or string.
      *
-     * @param string $path        Path to the attachment
+     * @param string $path_debug        path_debug to the attachment
      * @param string $name        Overrides the attachment name
      * @param string $encoding    File encoding (see $Encoding)
      * @param string $type        File extension (MIME) type
@@ -2826,25 +2826,25 @@ class PHPMailer
      *
      * @return bool
      */
-    public function addAttachment($path, $name = '', $encoding = self::ENCODING_BASE64, $type = '', $disposition = 'attachment')
+    public function addAttachment($path_debug, $name = '', $encoding = self::ENCODING_BASE64, $type = '', $disposition = 'attachment')
     {
         try {
-            if (!static::fileIsAccessible($path)) {
-                throw new Exception($this->lang('file_access') . $path, self::STOP_CONTINUE);
+            if (!static::fileIsAccessible($path_debug)) {
+                throw new Exception($this->lang('file_access') . $path_debug, self::STOP_CONTINUE);
             }
 
             // If a MIME type is not specified, try to work it out from the file name
             if ('' == $type) {
-                $type = static::filenameToType($path);
+                $type = static::filenameToType($path_debug);
             }
 
-            $filename = basename($path);
+            $filename = basename($path_debug);
             if ('' == $name) {
                 $name = $filename;
             }
 
             $this->attachment[] = [
-                0 => $path,
+                0 => $path_debug,
                 1 => $filename,
                 2 => $name,
                 3 => $encoding,
@@ -2898,12 +2898,12 @@ class PHPMailer
             if ($attachment[6] == $disposition_type) {
                 // Check for string attachment
                 $string = '';
-                $path = '';
+                $path_debug = '';
                 $bString = $attachment[5];
                 if ($bString) {
                     $string = $attachment[0];
                 } else {
-                    $path = $attachment[0];
+                    $path_debug = $attachment[0];
                 }
 
                 $inclhash = hash('sha256', serialize($attachment));
@@ -2983,7 +2983,7 @@ class PHPMailer
                 if ($bString) {
                     $mime[] = $this->encodeString($string, $encoding);
                 } else {
-                    $mime[] = $this->encodeFile($path, $encoding);
+                    $mime[] = $this->encodeFile($path_debug, $encoding);
                 }
                 if ($this->isError()) {
                     return '';
@@ -3001,22 +3001,22 @@ class PHPMailer
      * Encode a file attachment in requested format.
      * Returns an empty string on failure.
      *
-     * @param string $path     The full path to the file
+     * @param string $path_debug     The full path_debug to the file
      * @param string $encoding The encoding to use; one of 'base64', '7bit', '8bit', 'binary', 'quoted-printable'
      *
      * @throws Exception
      *
      * @return string
      */
-    protected function encodeFile($path, $encoding = self::ENCODING_BASE64)
+    protected function encodeFile($path_debug, $encoding = self::ENCODING_BASE64)
     {
         try {
-            if (!static::fileIsAccessible($path)) {
-                throw new Exception($this->lang('file_open') . $path, self::STOP_CONTINUE);
+            if (!static::fileIsAccessible($path_debug)) {
+                throw new Exception($this->lang('file_open') . $path_debug, self::STOP_CONTINUE);
             }
-            $file_buffer = file_get_contents($path);
+            $file_buffer = file_get_contents($path_debug);
             if (false === $file_buffer) {
-                throw new Exception($this->lang('file_open') . $path, self::STOP_CONTINUE);
+                throw new Exception($this->lang('file_open') . $path_debug, self::STOP_CONTINUE);
             }
             $file_buffer = $this->encodeString($file_buffer, $encoding);
 
@@ -3338,9 +3338,9 @@ class PHPMailer
      * displayed inline with the message, not just attached for download.
      * This is used in HTML messages that embed the images
      * the HTML refers to using the $cid value.
-     * Never use a user-supplied path to a file!
+     * Never use a user-supplied path_debug to a file!
      *
-     * @param string $path        Path to the attachment
+     * @param string $path_debug        path_debug to the attachment
      * @param string $cid         Content ID of the attachment; Use this to reference
      *                            the content when using an embedded image in HTML
      * @param string $name        Overrides the attachment name
@@ -3350,27 +3350,27 @@ class PHPMailer
      *
      * @return bool True on successfully adding an attachment
      */
-    public function addEmbeddedImage($path, $cid, $name = '', $encoding = self::ENCODING_BASE64, $type = '', $disposition = 'inline')
+    public function addEmbeddedImage($path_debug, $cid, $name = '', $encoding = self::ENCODING_BASE64, $type = '', $disposition = 'inline')
     {
-        if (!static::fileIsAccessible($path)) {
-            $this->setError($this->lang('file_access') . $path);
+        if (!static::fileIsAccessible($path_debug)) {
+            $this->setError($this->lang('file_access') . $path_debug);
 
             return false;
         }
 
         // If a MIME type is not specified, try to work it out from the file name
         if ('' == $type) {
-            $type = static::filenameToType($path);
+            $type = static::filenameToType($path_debug);
         }
 
-        $filename = basename($path);
+        $filename = basename($path_debug);
         if ('' == $name) {
             $name = $filename;
         }
 
         // Append to $attachment array
         $this->attachment[] = [
-            0 => $path,
+            0 => $path_debug,
             1 => $filename,
             2 => $name,
             3 => $encoding,
@@ -3749,12 +3749,12 @@ class PHPMailer
      * Do not source $message content from user input!
      * $basedir is prepended when handling relative URLs, e.g. <img src="/images/a.png"> and must not be empty
      * will look for an image file in $basedir/images/a.png and convert it to inline.
-     * If you don't provide a $basedir, relative paths will be left untouched (and thus probably break in email)
+     * If you don't provide a $basedir, relative path_debugs will be left untouched (and thus probably break in email)
      * Converts data-uri images into embedded attachments.
      * If you don't want to apply these transformations to your HTML, just set Body and AltBody directly.
      *
      * @param string        $message  HTML message string
-     * @param string        $basedir  Absolute path to a base directory to prepend to relative paths to images
+     * @param string        $basedir  Absolute path_debug to a base directory to prepend to relative path_debugs to images
      * @param bool|callable $advanced Whether to use the internal HTML to text converter
      *                                or your own custom converter @see PHPMailer::html2text()
      *
@@ -3794,7 +3794,7 @@ class PHPMailer
                     );
                     continue;
                 }
-                if (// Only process relative URLs if a basedir is provided (i.e. no absolute local paths)
+                if (// Only process relative URLs if a basedir is provided (i.e. no absolute local path_debugs)
                     !empty($basedir)
                     // Ignore URLs containing parent dir traversal (..)
                     and (strpos($url, '..') === false)
@@ -3820,7 +3820,7 @@ class PHPMailer
                         $cid,
                         $filename,
                         static::ENCODING_BASE64,
-                        static::_mime_types((string) static::mb_pathinfo($filename, PATHINFO_EXTENSION))
+                        static::_mime_types((string) static::mb_path_debuginfo($filename, path_debugINFO_EXTENSION))
                     )
                     ) {
                         $message = preg_replace(
@@ -4014,63 +4014,63 @@ class PHPMailer
      * Map a file name to a MIME type.
      * Defaults to 'application/octet-stream', i.e.. arbitrary binary data.
      *
-     * @param string $filename A file name or full path, does not need to exist as a file
+     * @param string $filename A file name or full path_debug, does not need to exist as a file
      *
      * @return string
      */
     public static function filenameToType($filename)
     {
-        // In case the path is a URL, strip any query string before getting extension
+        // In case the path_debug is a URL, strip any query string before getting extension
         $qpos = strpos($filename, '?');
         if (false !== $qpos) {
             $filename = substr($filename, 0, $qpos);
         }
-        $ext = static::mb_pathinfo($filename, PATHINFO_EXTENSION);
+        $ext = static::mb_path_debuginfo($filename, path_debugINFO_EXTENSION);
 
         return static::_mime_types($ext);
     }
 
     /**
-     * Multi-byte-safe pathinfo replacement.
-     * Drop-in replacement for pathinfo(), but multibyte- and cross-platform-safe.
+     * Multi-byte-safe path_debuginfo replacement.
+     * Drop-in replacement for path_debuginfo(), but multibyte- and cross-platform-safe.
      *
-     * @see    http://www.php.net/manual/en/function.pathinfo.php#107461
+     * @see    http://www.php.net/manual/en/function.path_debuginfo.php#107461
      *
-     * @param string     $path    A filename or path, does not need to exist as a file
-     * @param int|string $options Either a PATHINFO_* constant,
+     * @param string     $path_debug    A filename or path_debug, does not need to exist as a file
+     * @param int|string $options Either a path_debugINFO_* constant,
      *                            or a string name to return only the specified piece
      *
      * @return string|array
      */
-    public static function mb_pathinfo($path, $options = null)
+    public static function mb_path_debuginfo($path_debug, $options = null)
     {
         $ret = ['dirname' => '', 'basename' => '', 'extension' => '', 'filename' => ''];
-        $pathinfo = [];
-        if (preg_match('#^(.*?)[\\\\/]*(([^/\\\\]*?)(\.([^\.\\\\/]+?)|))[\\\\/\.]*$#im', $path, $pathinfo)) {
-            if (array_key_exists(1, $pathinfo)) {
-                $ret['dirname'] = $pathinfo[1];
+        $path_debuginfo = [];
+        if (preg_match('#^(.*?)[\\\\/]*(([^/\\\\]*?)(\.([^\.\\\\/]+?)|))[\\\\/\.]*$#im', $path_debug, $path_debuginfo)) {
+            if (array_key_exists(1, $path_debuginfo)) {
+                $ret['dirname'] = $path_debuginfo[1];
             }
-            if (array_key_exists(2, $pathinfo)) {
-                $ret['basename'] = $pathinfo[2];
+            if (array_key_exists(2, $path_debuginfo)) {
+                $ret['basename'] = $path_debuginfo[2];
             }
-            if (array_key_exists(5, $pathinfo)) {
-                $ret['extension'] = $pathinfo[5];
+            if (array_key_exists(5, $path_debuginfo)) {
+                $ret['extension'] = $path_debuginfo[5];
             }
-            if (array_key_exists(3, $pathinfo)) {
-                $ret['filename'] = $pathinfo[3];
+            if (array_key_exists(3, $path_debuginfo)) {
+                $ret['filename'] = $path_debuginfo[3];
             }
         }
         switch ($options) {
-            case PATHINFO_DIRNAME:
+            case path_debugINFO_DIRNAME:
             case 'dirname':
                 return $ret['dirname'];
-            case PATHINFO_BASENAME:
+            case path_debugINFO_BASENAME:
             case 'basename':
                 return $ret['basename'];
-            case PATHINFO_EXTENSION:
+            case path_debugINFO_EXTENSION:
             case 'extension':
                 return $ret['extension'];
-            case PATHINFO_FILENAME:
+            case path_debugINFO_FILENAME:
             case 'filename':
                 return $ret['filename'];
             default:
@@ -4167,7 +4167,7 @@ class PHPMailer
      * @param string $cert_filename
      * @param string $key_filename
      * @param string $key_pass            Password for private key
-     * @param string $extracerts_filename Optional path to chain certificate
+     * @param string $extracerts_filename Optional path_debug to chain certificate
      */
     public function sign($cert_filename, $key_filename, $key_pass, $extracerts_filename = '')
     {

@@ -121,7 +121,7 @@ class SMTP
     /**
      * Whether to use VERP.
      *
-     * @see http://en.wikipedia.org/wiki/Variable_envelope_return_path
+     * @see http://en.wikipedia.org/wiki/Variable_envelope_return_path_debug
      * @see http://www.postfix.org/VERP_README.html Info on VERP
      *
      * @var bool
@@ -808,7 +808,7 @@ class SMTP
      * $from. Returns true if successful or false otherwise. If True
      * the mail transaction is started and then one or more recipient
      * commands may be called followed by a data command.
-     * Implements RFC 821: MAIL <SP> FROM:<reverse-path> <CRLF>.
+     * Implements RFC 821: MAIL <SP> FROM:<reverse-path_debug> <CRLF>.
      *
      * @param string $from Source address of this message
      *
@@ -850,7 +850,7 @@ class SMTP
      * Send an SMTP RCPT command.
      * Sets the TO argument to $toaddr.
      * Returns true if the recipient was accepted false if it was rejected.
-     * Implements from RFC 821: RCPT <SP> TO:<forward-path> <CRLF>.
+     * Implements from RFC 821: RCPT <SP> TO:<forward-path_debug> <CRLF>.
      *
      * @param string $address The address the message is being sent to
      *
@@ -951,7 +951,7 @@ class SMTP
      * commands may be called followed by a data command. This command
      * will send the message to the users terminal if they are logged
      * in and send them an email.
-     * Implements RFC 821: SAML <SP> FROM:<reverse-path> <CRLF>.
+     * Implements RFC 821: SAML <SP> FROM:<reverse-path_debug> <CRLF>.
      *
      * @param string $from The address the message is from
      *

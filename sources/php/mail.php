@@ -94,8 +94,8 @@
 			
 			';
 			
-				$path = "/web/htdocs/www.climatecc.eu/home".$pdf;
-				$res = send_mail($mail, "Shared article", $content, $path); //with attachment
+				$path_debug = "/web/htdocs/www.climatecc.eu/home".$pdf;
+				$res = send_mail($mail, "Shared article", $content, $path_debug); //with attachment
 				
 			} else {
 				echo "</br></br>ERROR!";

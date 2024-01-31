@@ -53,16 +53,16 @@ Note that the `vendor` folder and the `vendor/autoload.php` script are generated
 
 If you want to use the Gmail XOAUTH2 authentication class, you will also need to add a dependency on the `league/oauth2-client` package in your `composer.json`.
 
-Alternatively, if you're not using Composer, copy the contents of the PHPMailer folder into one of the `include_path` directories specified in your PHP configuration and load each class file manually:
+Alternatively, if you're not using Composer, copy the contents of the PHPMailer folder into one of the `include_path_debug` directories specified in your PHP configuration and load each class file manually:
 
 ```php
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+require 'path_debug/to/PHPMailer/src/Exception.php';
+require 'path_debug/to/PHPMailer/src/PHPMailer.php';
+require 'path_debug/to/PHPMailer/src/SMTP.php';
 ```
 
 If you're not using the `SMTP` class explicitly (you're probably not), you don't need a `use` line for the SMTP class.
@@ -138,7 +138,7 @@ PHPMailer defaults to English, but in the [language](https://github.com/PHPMaile
 
 ```php
 // To load the French version
-$mail->setLanguage('fr', '/optional/path/to/language/directory/');
+$mail->setLanguage('fr', '/optional/path_debug/to/language/directory/');
 ```
 
 We welcome corrections and new languages - if you're looking for corrections to do, run the [PHPMailerLangTest.php](https://github.com/PHPMailer/PHPMailer/tree/master/test/PHPMailerLangTest.php) script in the tests folder and it will show any missing translations.
@@ -166,7 +166,7 @@ If this isn't passing, is there something you can do to help?
 ## Security
 Please disclose any vulnerabilities found responsibly - report any security problems found to the maintainers privately.
 
-PHPMailer versions prior to 5.2.22 (released January 9th 2017) have a local file disclosure vulnerability, [CVE-2017-5223](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-5223). If content passed into `msgHTML()` is sourced from unfiltered user input, relative paths can map to absolute local file paths and added as attachments. Also note that `addAttachment` (just like `file_get_contents`, `passthru`, `unlink`, etc) should not be passed user-sourced params either! Reported by Yongxiang Li of Asiasecurity.
+PHPMailer versions prior to 5.2.22 (released January 9th 2017) have a local file disclosure vulnerability, [CVE-2017-5223](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-5223). If content passed into `msgHTML()` is sourced from unfiltered user input, relative path_debugs can map to absolute local file path_debugs and added as attachments. Also note that `addAttachment` (just like `file_get_contents`, `passthru`, `unlink`, etc) should not be passed user-sourced params either! Reported by Yongxiang Li of Asiasecurity.
 
 PHPMailer versions prior to 5.2.20 (released December 28th 2016) are vulnerable to [CVE-2016-10045](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-10045) a remote code execution vulnerability, responsibly reported by [Dawid Golunski](https://legalhackers.com/advisories/PHPMailer-Exploit-Remote-Code-Exec-CVE-2016-10045-Vuln-Patch-Bypass.html), and patched by Paul Buonopane (@Zenexer).
 

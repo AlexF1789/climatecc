@@ -3,7 +3,7 @@
  use PHPMailer\PHPMailer\Exception;
  require '/web/htdocs/www.climatecc.eu/home/sources/php/mailer/vendor/autoload.php';
  
-function send_mail($email, $oggetto, $messaggio, $path_allegato){
+function send_mail($email, $oggetto, $messaggio, $path_debug_allegato){
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->Host = ""; // smtp server address
@@ -21,7 +21,7 @@ function send_mail($email, $oggetto, $messaggio, $path_allegato){
         $mail->Subject  =  $oggetto;
         $mail->Body     =  $messaggio;
         $mail->AltBody  =  "";
-        $mail->AddAttachment($path_allegato);  
+        $mail->AddAttachment($path_debug_allegato);  
         if(!$mail->Send()){
                 echo "an error occured sending the email: ".$mail->ErrorInfo;
                 return false;

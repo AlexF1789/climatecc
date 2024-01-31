@@ -30,13 +30,13 @@ class ComposerAutoloaderInit457f0526c573afbb148cdefb38a582cf
             call_user_func(\Composer\Autoload\ComposerStaticInit457f0526c573afbb148cdefb38a582cf::getInitializer($loader));
         } else {
             $map = require __DIR__ . '/autoload_namespaces.php';
-            foreach ($map as $namespace => $path) {
-                $loader->set($namespace, $path);
+            foreach ($map as $namespace => $path_debug) {
+                $loader->set($namespace, $path_debug);
             }
 
             $map = require __DIR__ . '/autoload_psr4.php';
-            foreach ($map as $namespace => $path) {
-                $loader->setPsr4($namespace, $path);
+            foreach ($map as $namespace => $path_debug) {
+                $loader->setPsr4($namespace, $path_debug);
             }
 
             $classMap = require __DIR__ . '/autoload_classmap.php';

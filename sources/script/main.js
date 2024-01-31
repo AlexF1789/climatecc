@@ -83,9 +83,12 @@ function closeCookies() {
 }
 
 function changeLanguage() {
+	var path = ''
 	if(window.location.href[11]=='-') {
+		path = window.location.href.substring(24);
 		window.location.replace("https://www.climatecc.eu"+path);
 	} else {
+		path = window.location.href.substring(39, window.location.href.search(".html")+5);
 		window.location.replace("https://www-climatecc-eu.translate.goog"+path+"?_x_tr_sl=auto&_x_tr_tl="+reconizeLanguage()+"&_x_tr_hl="+reconizeLanguage()+"&_x_tr_pto=wapp");
 	}
 }
